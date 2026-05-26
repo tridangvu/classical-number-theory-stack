@@ -1,0 +1,1842 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Histoire technique de la théorie des nombres de Fermat à Hilbert">
+      
+      
+        <meta name="author" content="Tri">
+      
+      
+        <link rel="canonical" href="https://tridangvu.github.io/classical-number-theory-stack/notes/taxonomy-initial/">
+      
+      
+        <link rel="prev" href="../scope-fermat-to-hilbert/">
+      
+      
+        <link rel="next" href="../../timelines/fermat-to-hilbert-main-timeline/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Taxonomie initiale - Classical Number Theory Stack</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#taxonomie-initiale-du-projet" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Classical Number Theory Stack" class="md-header__button md-logo" aria-label="Classical Number Theory Stack" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Classical Number Theory Stack
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Taxonomie initiale
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../project-map/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Carte du projet
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../entries/two-squares-theorem/" class="md-tabs__link">
+          
+  
+  
+  Entrées
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../scope-fermat-to-hilbert/" class="md-tabs__link">
+          
+  
+  
+  Notes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../timelines/fermat-to-hilbert-main-timeline/" class="md-tabs__link">
+          
+  
+  
+  Timelines
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../sources/gauss-disquisitiones-arithmeticae/" class="md-tabs__link">
+          
+  
+  
+  Sources
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Classical Number Theory Stack" class="md-nav__button md-logo" aria-label="Classical Number Theory Stack" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Classical Number Theory Stack
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Carte du projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrées
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Entrées
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/two-squares-theorem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Théorème des deux carrés
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--expanded-draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/fermat-little-theorem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Petit théorème de Fermat
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/quadratic-reciprocity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Réciprocité quadratique
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/gauss-composition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Composition de Gauss
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/dirichlet-arithmetic-progressions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Théorème de Dirichlet
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/quadratic-gauss-sums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sommes de Gauss quadratiques
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/kummer-regular-primes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Critère de Kummer
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/dedekind-ideal-factorization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Factorisation des idéaux
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/dirichlet-unit-theorem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Théorème des unités
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/hilbert-zahlbericht/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zahlbericht
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scope-fermat-to-hilbert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Périmètre
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Taxonomie initiale
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Taxonomie initiale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectif" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectif
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Timelines
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Timelines
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../timelines/fermat-to-hilbert-main-timeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fermat à Hilbert
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/gauss-disquisitiones-arithmeticae/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disquisitiones Arithmeticae
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/hilbert-zahlbericht/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zahlbericht
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/cox-primes-of-the-form-x2-ny2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cox
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/edwards-fermat-last-theorem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Edwards
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectif" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectif
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="taxonomie-initiale-du-projet">Taxonomie initiale du projet<a class="headerlink" href="#taxonomie-initiale-du-projet" title="Permanent link">&para;</a></h1>
+<h2 id="objectif">Objectif<a class="headerlink" href="#objectif" title="Permanent link">&para;</a></h2>
+<p>Ce fichier sert à organiser les grands blocs intellectuels du projet.</p>
+<p>Le but n'est pas de figer définitivement la structure, mais de disposer d'une première carte pour classer :</p>
+<ul>
+<li>les résultats ;</li>
+<li>les personnes ;</li>
+<li>les problèmes ;</li>
+<li>les concepts ;</li>
+<li>les sources ;</li>
+<li>les dépendances historiques et mathématiques.</li>
+</ul>
+<hr />
+<h1 id="i-axes-principaux">I. Axes principaux<a class="headerlink" href="#i-axes-principaux" title="Permanent link">&para;</a></h1>
+<h2 id="1-arithmetique-fermatienne-et-eulerienne">1. Arithmétique fermatienne et eulérienne<a class="headerlink" href="#1-arithmetique-fermatienne-et-eulerienne" title="Permanent link">&para;</a></h2>
+<h3 id="objets">Objets<a class="headerlink" href="#objets" title="Permanent link">&para;</a></h3>
+<ul>
+<li>nombres entiers ;</li>
+<li>divisibilité ;</li>
+<li>congruences élémentaires ;</li>
+<li>résidus ;</li>
+<li>puissances modulo un entier ;</li>
+<li>équations diophantiennes ;</li>
+<li>descente infinie.</li>
+</ul>
+<h3 id="problemes-moteurs">Problèmes moteurs<a class="headerlink" href="#problemes-moteurs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Quels entiers sont sommes de deux carrés ?</li>
+<li>Quand une équation diophantienne a-t-elle une solution ?</li>
+<li>Comment contrôler les puissances modulo un nombre premier ?</li>
+<li>Pourquoi la descente infinie permet-elle de démontrer des impossibilités ?</li>
+</ul>
+<h3 id="personnes-centrales">Personnes centrales<a class="headerlink" href="#personnes-centrales" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fermat ;</li>
+<li>Euler ;</li>
+<li>Lagrange.</li>
+</ul>
+<h3 id="resultats-fondamentaux">Résultats fondamentaux<a class="headerlink" href="#resultats-fondamentaux" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Petit théorème de Fermat.</li>
+<li>Théorème des deux carrés.</li>
+<li>Méthode de descente infinie.</li>
+<li>Premiers résultats sur les résidus quadratiques.</li>
+<li>Identité des deux carrés.</li>
+</ul>
+<hr />
+<h2 id="2-congruences-residus-et-reciprocite">2. Congruences, résidus et réciprocité<a class="headerlink" href="#2-congruences-residus-et-reciprocite" title="Permanent link">&para;</a></h2>
+<h3 id="objets_1">Objets<a class="headerlink" href="#objets_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>congruences ;</li>
+<li>classes modulo <span class="arithmatex">\(n\)</span> ;</li>
+<li>résidus quadratiques ;</li>
+<li>symbole de Legendre ;</li>
+<li>symbole de Jacobi ;</li>
+<li>caractères multiplicatifs.</li>
+</ul>
+<h3 id="problemes-moteurs_1">Problèmes moteurs<a class="headerlink" href="#problemes-moteurs_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Décider si <span class="arithmatex">\(a\)</span> est un carré modulo <span class="arithmatex">\(p\)</span>.</li>
+<li>Comprendre la symétrie mystérieuse entre deux nombres premiers.</li>
+<li>Transformer une question de représentation en une question de congruence.</li>
+</ul>
+<h3 id="personnes-centrales_1">Personnes centrales<a class="headerlink" href="#personnes-centrales_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Euler ;</li>
+<li>Legendre ;</li>
+<li>Gauss ;</li>
+<li>Jacobi ;</li>
+<li>Eisenstein.</li>
+</ul>
+<h3 id="resultats-fondamentaux_1">Résultats fondamentaux<a class="headerlink" href="#resultats-fondamentaux_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Critère d'Euler.</li>
+<li>Loi de réciprocité quadratique.</li>
+<li>Lois complémentaires.</li>
+<li>Réciprocité cubique.</li>
+<li>Réciprocité biquadratique.</li>
+</ul>
+<hr />
+<h2 id="3-formes-quadratiques">3. Formes quadratiques<a class="headerlink" href="#3-formes-quadratiques" title="Permanent link">&para;</a></h2>
+<h3 id="objets_2">Objets<a class="headerlink" href="#objets_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>formes quadratiques binaires ;</li>
+<li>discriminant ;</li>
+<li>formes primitives ;</li>
+<li>formes réduites ;</li>
+<li>classes de formes ;</li>
+<li>genres ;</li>
+<li>composition des formes.</li>
+</ul>
+<h3 id="problemes-moteurs_2">Problèmes moteurs<a class="headerlink" href="#problemes-moteurs_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Quels entiers sont représentés par une forme donnée ?</li>
+<li>Comment classifier les formes de discriminant fixé ?</li>
+<li>Pourquoi les classes de formes se composent-elles ?</li>
+<li>Comment les formes préfigurent-elles les idéaux ?</li>
+</ul>
+<h3 id="personnes-centrales_2">Personnes centrales<a class="headerlink" href="#personnes-centrales_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fermat ;</li>
+<li>Euler ;</li>
+<li>Lagrange ;</li>
+<li>Legendre ;</li>
+<li>Gauss ;</li>
+<li>Dirichlet ;</li>
+<li>Dedekind.</li>
+</ul>
+<h3 id="resultats-fondamentaux_2">Résultats fondamentaux<a class="headerlink" href="#resultats-fondamentaux_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Réduction des formes quadratiques binaires.</li>
+<li>Composition de Gauss.</li>
+<li>Théorie des genres.</li>
+<li>Classification des formes de discriminant donné.</li>
+<li>Lien entre formes et idéaux quadratiques.</li>
+</ul>
+<hr />
+<h2 id="4-sommes-de-gauss-sommes-de-jacobi-et-reciprocites-superieures">4. Sommes de Gauss, sommes de Jacobi et réciprocités supérieures<a class="headerlink" href="#4-sommes-de-gauss-sommes-de-jacobi-et-reciprocites-superieures" title="Permanent link">&para;</a></h2>
+<h3 id="objets_3">Objets<a class="headerlink" href="#objets_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>racines de l'unité ;</li>
+<li>caractères ;</li>
+<li>sommes de Gauss ;</li>
+<li>sommes de Jacobi ;</li>
+<li>entiers de Gauss ;</li>
+<li>entiers d'Eisenstein ;</li>
+<li>anneaux cyclotomiques.</li>
+</ul>
+<h3 id="problemes-moteurs_3">Problèmes moteurs<a class="headerlink" href="#problemes-moteurs_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Comment calculer explicitement les phénomènes de réciprocité ?</li>
+<li>Pourquoi les racines de l'unité encodent-elles des congruences ?</li>
+<li>Comment passer de la réciprocité quadratique aux réciprocités supérieures ?</li>
+</ul>
+<h3 id="personnes-centrales_3">Personnes centrales<a class="headerlink" href="#personnes-centrales_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Gauss ;</li>
+<li>Jacobi ;</li>
+<li>Eisenstein ;</li>
+<li>Kummer.</li>
+</ul>
+<h3 id="resultats-fondamentaux_3">Résultats fondamentaux<a class="headerlink" href="#resultats-fondamentaux_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Évaluation des sommes de Gauss quadratiques.</li>
+<li>Propriétés multiplicatives des sommes de Jacobi.</li>
+<li>Réciprocité cubique.</li>
+<li>Réciprocité biquadratique.</li>
+<li>Premiers liens entre cyclotomie et arithmétique algébrique.</li>
+</ul>
+<hr />
+<h2 id="5-fonctions-elliptiques-lemniscate-et-multiplication-complexe">5. Fonctions elliptiques, lemniscate et multiplication complexe<a class="headerlink" href="#5-fonctions-elliptiques-lemniscate-et-multiplication-complexe" title="Permanent link">&para;</a></h2>
+<h3 id="objets_4">Objets<a class="headerlink" href="#objets_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>intégrales elliptiques ;</li>
+<li>fonctions elliptiques ;</li>
+<li>lemniscate ;</li>
+<li>périodes ;</li>
+<li>réseaux ;</li>
+<li>multiplication complexe ;</li>
+<li>valeurs spéciales ;</li>
+<li>analogie cyclotomie / lemniscate.</li>
+</ul>
+<h3 id="problemes-moteurs_4">Problèmes moteurs<a class="headerlink" href="#problemes-moteurs_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Quel est l'analogue elliptique des racines de l'unité ?</li>
+<li>Comment diviser la lemniscate comme on divise le cercle ?</li>
+<li>Pourquoi la multiplication complexe construit-elle des extensions abéliennes ?</li>
+<li>Quel rêve arithmétique Kronecker formule-t-il à partir de ces exemples ?</li>
+</ul>
+<h3 id="personnes-centrales_4">Personnes centrales<a class="headerlink" href="#personnes-centrales_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Abel ;</li>
+<li>Jacobi ;</li>
+<li>Eisenstein ;</li>
+<li>Kronecker ;</li>
+<li>Weber ;</li>
+<li>Hilbert.</li>
+</ul>
+<h3 id="resultats-fondamentaux_4">Résultats fondamentaux<a class="headerlink" href="#resultats-fondamentaux_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Théorème d'Abel sur la lemniscate.</li>
+<li>Division lemniscatique.</li>
+<li>Multiplication complexe.</li>
+<li>Génération de corps abéliens imaginaires quadratiques par valeurs spéciales.</li>
+<li>Jugendtraum de Kronecker.</li>
+</ul>
+<hr />
+<h2 id="6-methodes-analytiques-de-dirichlet">6. Méthodes analytiques de Dirichlet<a class="headerlink" href="#6-methodes-analytiques-de-dirichlet" title="Permanent link">&para;</a></h2>
+<h3 id="objets_5">Objets<a class="headerlink" href="#objets_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>séries de Dirichlet ;</li>
+<li>caractères de Dirichlet ;</li>
+<li>produits eulériens ;</li>
+<li>fonctions <span class="arithmatex">\(L\)</span> ;</li>
+<li>densité de nombres premiers ;</li>
+<li>nombres de classes.</li>
+</ul>
+<h3 id="problemes-moteurs_5">Problèmes moteurs<a class="headerlink" href="#problemes-moteurs_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Existe-t-il une infinité de nombres premiers dans une progression arithmétique ?</li>
+<li>Comment relier analyse et arithmétique ?</li>
+<li>Pourquoi les caractères permettent-ils de séparer les classes modulo <span class="arithmatex">\(q\)</span> ?</li>
+<li>Comment les fonctions <span class="arithmatex">\(L\)</span> contrôlent-elles les nombres de classes ?</li>
+</ul>
+<h3 id="personnes-centrales_5">Personnes centrales<a class="headerlink" href="#personnes-centrales_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Euler ;</li>
+<li>Dirichlet ;</li>
+<li>Riemann ;</li>
+<li>Dedekind.</li>
+</ul>
+<h3 id="resultats-fondamentaux_5">Résultats fondamentaux<a class="headerlink" href="#resultats-fondamentaux_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Produit eulérien.</li>
+<li>Théorème de Dirichlet sur les progressions arithmétiques.</li>
+<li>Non-annulation de <span class="arithmatex">\(L(1,\chi)\)</span>.</li>
+<li>Formule analytique du nombre de classes.</li>
+<li>Début de la théorie analytique des nombres.</li>
+</ul>
+<hr />
+<h2 id="7-corps-cyclotomiques-et-crise-de-la-factorisation-unique">7. Corps cyclotomiques et crise de la factorisation unique<a class="headerlink" href="#7-corps-cyclotomiques-et-crise-de-la-factorisation-unique" title="Permanent link">&para;</a></h2>
+<h3 id="objets_6">Objets<a class="headerlink" href="#objets_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>racines <span class="arithmatex">\(p\)</span>-ièmes de l'unité ;</li>
+<li>corps cyclotomiques ;</li>
+<li>entiers cyclotomiques ;</li>
+<li>unités cyclotomiques ;</li>
+<li>nombres idéaux ;</li>
+<li>nombres de classes ;</li>
+<li>nombres réguliers ;</li>
+<li>nombres de Bernoulli.</li>
+</ul>
+<h3 id="problemes-moteurs_6">Problèmes moteurs<a class="headerlink" href="#problemes-moteurs_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Pourquoi la factorisation naïve de <span class="arithmatex">\(x^p+y^p=z^p\)</span> échoue-t-elle ?</li>
+<li>Comment sauver la factorisation unique ?</li>
+<li>Pourquoi certains exposants premiers sont-ils plus faciles que d'autres ?</li>
+<li>D'où vient le lien entre Fermat, Bernoulli et le nombre de classes ?</li>
+</ul>
+<h3 id="personnes-centrales_6">Personnes centrales<a class="headerlink" href="#personnes-centrales_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Lamé ;</li>
+<li>Cauchy ;</li>
+<li>Kummer ;</li>
+<li>Eisenstein ;</li>
+<li>Dedekind.</li>
+</ul>
+<h3 id="resultats-fondamentaux_6">Résultats fondamentaux<a class="headerlink" href="#resultats-fondamentaux_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Introduction des nombres idéaux.</li>
+<li>Critère de régularité de Kummer.</li>
+<li>Théorème de Fermat pour les exposants réguliers.</li>
+<li>Lien entre nombres de Bernoulli et classes cyclotomiques.</li>
+<li>Transition vers les idéaux de Dedekind.</li>
+</ul>
+<hr />
+<h2 id="8-theorie-algebrique-des-nombres">8. Théorie algébrique des nombres<a class="headerlink" href="#8-theorie-algebrique-des-nombres" title="Permanent link">&para;</a></h2>
+<h3 id="objets_7">Objets<a class="headerlink" href="#objets_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>nombres algébriques ;</li>
+<li>entiers algébriques ;</li>
+<li>anneaux d'entiers ;</li>
+<li>idéaux ;</li>
+<li>idéaux premiers ;</li>
+<li>factorisation unique des idéaux ;</li>
+<li>groupe de classes ;</li>
+<li>unités ;</li>
+<li>discriminant ;</li>
+<li>ramification ;</li>
+<li>décomposition des premiers.</li>
+</ul>
+<h3 id="problemes-moteurs_7">Problèmes moteurs<a class="headerlink" href="#problemes-moteurs_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Comment restaurer une factorisation unique correcte ?</li>
+<li>Qu'est-ce qu'un entier algébrique ?</li>
+<li>Comment un nombre premier ordinaire se décompose-t-il dans une extension ?</li>
+<li>Que mesure le groupe de classes ?</li>
+<li>Pourquoi les unités forment-elles un objet central ?</li>
+</ul>
+<h3 id="personnes-centrales_7">Personnes centrales<a class="headerlink" href="#personnes-centrales_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Dedekind ;</li>
+<li>Kronecker ;</li>
+<li>Dirichlet ;</li>
+<li>Hilbert.</li>
+</ul>
+<h3 id="resultats-fondamentaux_7">Résultats fondamentaux<a class="headerlink" href="#resultats-fondamentaux_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Définition des entiers algébriques.</li>
+<li>Factorisation unique des idéaux.</li>
+<li>Théorème des unités de Dirichlet.</li>
+<li>Groupe de classes.</li>
+<li>Théorie de la ramification.</li>
+<li>Théorème de Dedekind sur la décomposition des idéaux premiers.</li>
+<li>Synthèse de Hilbert.</li>
+</ul>
+<hr />
+<h2 id="9-kronecker-hilbert-et-la-synthese-finale">9. Kronecker, Hilbert et la synthèse finale<a class="headerlink" href="#9-kronecker-hilbert-et-la-synthese-finale" title="Permanent link">&para;</a></h2>
+<h3 id="objets_8">Objets<a class="headerlink" href="#objets_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>corps de nombres ;</li>
+<li>extensions abéliennes ;</li>
+<li>multiplication complexe ;</li>
+<li>fonctions spéciales ;</li>
+<li>corps de classes naissant ;</li>
+<li>Zahlbericht.</li>
+</ul>
+<h3 id="problemes-moteurs_8">Problèmes moteurs<a class="headerlink" href="#problemes-moteurs_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Peut-on construire explicitement les extensions abéliennes des corps de nombres ?</li>
+<li>Quelle est la synthèse complète de la théorie algébrique des nombres au XIXe siècle ?</li>
+<li>Comment organiser tout ce qui va de Gauss à Dedekind ?</li>
+<li>Quels problèmes ouverts structurent le XXe siècle ?</li>
+</ul>
+<h3 id="personnes-centrales_8">Personnes centrales<a class="headerlink" href="#personnes-centrales_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Kronecker ;</li>
+<li>Weber ;</li>
+<li>Hilbert ;</li>
+<li>Takagi comme ouverture ultérieure.</li>
+</ul>
+<h3 id="resultats-fondamentaux_8">Résultats fondamentaux<a class="headerlink" href="#resultats-fondamentaux_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Jugendtraum de Kronecker.</li>
+<li>Théorie de la multiplication complexe.</li>
+<li>Zahlbericht de Hilbert.</li>
+<li>Premiers énoncés systématiques vers la théorie du corps de classes.</li>
+<li>Problèmes de Hilbert liés à l'arithmétique.</li>
+</ul>
+<hr />
+<h1 id="ii-fils-rouges-du-projet">II. Fils rouges du projet<a class="headerlink" href="#ii-fils-rouges-du-projet" title="Permanent link">&para;</a></h1>
+<h2 id="fil-rouge-a-fermat">Fil rouge A — Fermat<a class="headerlink" href="#fil-rouge-a-fermat" title="Permanent link">&para;</a></h2>
+<p>Question directrice :</p>
+<p>Comment les problèmes de Fermat forcent-ils la création de nouveaux objets ?</p>
+<p>Exemples :</p>
+<ul>
+<li>descente infinie ;</li>
+<li>sommes de deux carrés ;</li>
+<li>dernier théorème de Fermat ;</li>
+<li>factorisation dans des anneaux plus grands ;</li>
+<li>corps cyclotomiques ;</li>
+<li>régularité de Kummer.</li>
+</ul>
+<h2 id="fil-rouge-b-reciprocite">Fil rouge B — Réciprocité<a class="headerlink" href="#fil-rouge-b-reciprocite" title="Permanent link">&para;</a></h2>
+<p>Question directrice :</p>
+<p>Pourquoi les lois de réciprocité sont-elles le cœur caché de l'arithmétique classique ?</p>
+<p>Exemples :</p>
+<ul>
+<li>réciprocité quadratique ;</li>
+<li>réciprocité cubique ;</li>
+<li>réciprocité biquadratique ;</li>
+<li>lois de réciprocité supérieures ;</li>
+<li>corps de classes comme forme moderne ultime.</li>
+</ul>
+<h2 id="fil-rouge-c-factorisation">Fil rouge C — Factorisation<a class="headerlink" href="#fil-rouge-c-factorisation" title="Permanent link">&para;</a></h2>
+<p>Question directrice :</p>
+<p>Que devient la factorisation unique quand on quitte <span class="arithmatex">\(\mathbf Z\)</span> ?</p>
+<p>Exemples :</p>
+<ul>
+<li>factorisation dans <span class="arithmatex">\(\mathbf Z[i]\)</span> ;</li>
+<li>factorisation dans les anneaux cyclotomiques ;</li>
+<li>échec de la factorisation unique ;</li>
+<li>nombres idéaux de Kummer ;</li>
+<li>idéaux de Dedekind ;</li>
+<li>groupes de classes.</li>
+</ul>
+<h2 id="fil-rouge-d-representation">Fil rouge D — Représentation<a class="headerlink" href="#fil-rouge-d-representation" title="Permanent link">&para;</a></h2>
+<p>Question directrice :</p>
+<p>Quels entiers sont représentés par quelles formes ?</p>
+<p>Exemples :</p>
+<ul>
+<li><span class="arithmatex">\(x^2+y^2\)</span> ;</li>
+<li>formes <span class="arithmatex">\(x^2+ny^2\)</span> ;</li>
+<li>formes quadratiques binaires ;</li>
+<li>genres ;</li>
+<li>classes ;</li>
+<li>interprétation par idéaux.</li>
+</ul>
+<h2 id="fil-rouge-e-passage-du-calcul-au-concept">Fil rouge E — Passage du calcul au concept<a class="headerlink" href="#fil-rouge-e-passage-du-calcul-au-concept" title="Permanent link">&para;</a></h2>
+<p>Question directrice :</p>
+<p>Comment passe-t-on de calculs explicites à des structures abstraites ?</p>
+<p>Exemples :</p>
+<ul>
+<li>congruences ;</li>
+<li>sommes de Gauss ;</li>
+<li>formes quadratiques ;</li>
+<li>idéaux ;</li>
+<li>corps de nombres ;</li>
+<li>groupes de classes ;</li>
+<li>fonctions <span class="arithmatex">\(L\)</span>.</li>
+</ul>
+<hr />
+<h1 id="iii-types-de-fiches-a-creer">III. Types de fiches à créer<a class="headerlink" href="#iii-types-de-fiches-a-creer" title="Permanent link">&para;</a></h1>
+<h2 id="fiches-de-resultats">Fiches de résultats<a class="headerlink" href="#fiches-de-resultats" title="Permanent link">&para;</a></h2>
+<p>Dossier conseillé : <code>entries/</code></p>
+<p>Exemples :</p>
+<ul>
+<li><code>fermat-little-theorem.md</code></li>
+<li><code>two-squares-theorem.md</code></li>
+<li><code>quadratic-reciprocity.md</code></li>
+<li><code>gauss-composition.md</code></li>
+<li><code>dirichlet-arithmetic-progressions.md</code></li>
+<li><code>kummer-regular-primes.md</code></li>
+<li><code>dedekind-ideal-factorization.md</code></li>
+<li><code>dirichlet-unit-theorem.md</code></li>
+<li><code>hilbert-zahlbericht.md</code></li>
+</ul>
+<h2 id="fiches-de-personnes">Fiches de personnes<a class="headerlink" href="#fiches-de-personnes" title="Permanent link">&para;</a></h2>
+<p>Dossier conseillé : <code>entries/</code></p>
+<p>Exemples :</p>
+<ul>
+<li><code>fermat.md</code></li>
+<li><code>euler.md</code></li>
+<li><code>lagrange.md</code></li>
+<li><code>legendre.md</code></li>
+<li><code>gauss.md</code></li>
+<li><code>dirichlet.md</code></li>
+<li><code>jacobi.md</code></li>
+<li><code>eisenstein.md</code></li>
+<li><code>kummer.md</code></li>
+<li><code>dedekind.md</code></li>
+<li><code>kronecker.md</code></li>
+<li><code>hilbert.md</code></li>
+</ul>
+<h2 id="fiches-de-sources">Fiches de sources<a class="headerlink" href="#fiches-de-sources" title="Permanent link">&para;</a></h2>
+<p>Dossier conseillé : <code>sources/</code></p>
+<p>Exemples :</p>
+<ul>
+<li><code>gauss-disquisitiones-arithmeticae.md</code></li>
+<li><code>dirichlet-vorlesungen-zahlentheorie.md</code></li>
+<li><code>dedekind-supplements.md</code></li>
+<li><code>hilbert-zahlbericht.md</code></li>
+<li><code>cox-primes-of-the-form-x2-ny2.md</code></li>
+<li><code>edwards-fermat-last-theorem.md</code></li>
+</ul>
+<h2 id="fiches-de-sujets">Fiches de sujets<a class="headerlink" href="#fiches-de-sujets" title="Permanent link">&para;</a></h2>
+<p>Dossier conseillé : <code>notes/</code> ou <code>entries/</code></p>
+<p>Exemples :</p>
+<ul>
+<li><code>quadratic-forms.md</code></li>
+<li><code>cyclotomic-fields.md</code></li>
+<li><code>gauss-sums.md</code></li>
+<li><code>dirichlet-characters.md</code></li>
+<li><code>class-groups.md</code></li>
+<li><code>complex-multiplication.md</code></li>
+</ul>
+<hr />
+<h1 id="iv-priorites-de-construction">IV. Priorités de construction<a class="headerlink" href="#iv-priorites-de-construction" title="Permanent link">&para;</a></h1>
+<h2 id="priorite-1">Priorité 1<a class="headerlink" href="#priorite-1" title="Permanent link">&para;</a></h2>
+<p>Créer une première chronologie Fermat-Hilbert.</p>
+<h2 id="priorite-2">Priorité 2<a class="headerlink" href="#priorite-2" title="Permanent link">&para;</a></h2>
+<p>Créer dix fiches de résultats fondamentaux.</p>
+<h2 id="priorite-3">Priorité 3<a class="headerlink" href="#priorite-3" title="Permanent link">&para;</a></h2>
+<p>Créer une bibliographie minimale.</p>
+<h2 id="priorite-4">Priorité 4<a class="headerlink" href="#priorite-4" title="Permanent link">&para;</a></h2>
+<p>Créer des fiches pour les personnes principales.</p>
+<h2 id="priorite-5">Priorité 5<a class="headerlink" href="#priorite-5" title="Permanent link">&para;</a></h2>
+<p>Créer progressivement un graphe de dépendances conceptuelles.</p>
+<hr />
+<h1 id="v-regle-pratique">V. Règle pratique<a class="headerlink" href="#v-regle-pratique" title="Permanent link">&para;</a></h1>
+<p>Chaque fois qu'une nouvelle note est créée, elle doit idéalement indiquer :</p>
+<ul>
+<li>à quel axe elle appartient ;</li>
+<li>quels résultats elle utilise ;</li>
+<li>quels résultats elle prépare ;</li>
+<li>quelle personne ou quelle source historique elle concerne ;</li>
+<li>son statut : brouillon, esquisse, stable, à vérifier.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
