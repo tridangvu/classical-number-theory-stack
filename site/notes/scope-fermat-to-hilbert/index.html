@@ -1,0 +1,2182 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Histoire technique de la théorie des nombres de Fermat à Hilbert">
+      
+      
+        <meta name="author" content="Tri">
+      
+      
+        <link rel="canonical" href="https://tridangvu.github.io/classical-number-theory-stack/notes/scope-fermat-to-hilbert/">
+      
+      
+        <link rel="prev" href="../../entries/hilbert-zahlbericht/">
+      
+      
+        <link rel="next" href="../taxonomy-initial/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Périmètre - Classical Number Theory Stack</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#perimetre-du-projet-de-fermat-a-hilbert" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Classical Number Theory Stack" class="md-header__button md-logo" aria-label="Classical Number Theory Stack" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Classical Number Theory Stack
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Périmètre
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../project-map/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Carte du projet
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../entries/two-squares-theorem/" class="md-tabs__link">
+          
+  
+  
+  Entrées
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Notes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../timelines/fermat-to-hilbert-main-timeline/" class="md-tabs__link">
+          
+  
+  
+  Timelines
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../sources/gauss-disquisitiones-arithmeticae/" class="md-tabs__link">
+          
+  
+  
+  Sources
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Classical Number Theory Stack" class="md-nav__button md-logo" aria-label="Classical Number Theory Stack" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Classical Number Theory Stack
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Carte du projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrées
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Entrées
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/two-squares-theorem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Théorème des deux carrés
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--expanded-draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/fermat-little-theorem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Petit théorème de Fermat
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/quadratic-reciprocity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Réciprocité quadratique
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/gauss-composition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Composition de Gauss
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/dirichlet-arithmetic-progressions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Théorème de Dirichlet
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/quadratic-gauss-sums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sommes de Gauss quadratiques
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/kummer-regular-primes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Critère de Kummer
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/dedekind-ideal-factorization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Factorisation des idéaux
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/dirichlet-unit-theorem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Théorème des unités
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entries/hilbert-zahlbericht/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zahlbericht
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Périmètre
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Périmètre
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#principe-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principe général
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#point-de-depart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Point de départ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#point-darrivee-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Point d'arrivée principal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ce-qui-est-inclus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ce qui est inclus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ce qui est inclus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-theorie-elementaire-et-classique-des-nombres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Théorie élémentaire et classique des nombres
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-formes-quadratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Formes quadratiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sommes-exponentielles-caracteres-et-reciprocites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Sommes exponentielles, caractères et réciprocités
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-fonctions-elliptiques-et-multiplication-complexe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Fonctions elliptiques et multiplication complexe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-methodes-analytiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Méthodes analytiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-corps-cyclotomiques-et-fermat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Corps cyclotomiques et Fermat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-theorie-algebrique-des-nombres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Théorie algébrique des nombres
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-dedekind-kronecker-hilbert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Dedekind, Kronecker, Hilbert
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ce-qui-est-secondaire-mais-autorise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ce qui est secondaire mais autorisé
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ce-qui-est-exclu-au-debut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ce qui est exclu au début
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organisation-chronologique-provisoire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organisation chronologique provisoire
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Organisation chronologique provisoire">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1630-1700-fermat-et-les-origines-classiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1630-1700 : Fermat et les origines classiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1700-1770-euler-et-larithmetique-constructive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1700-1770 : Euler et l'arithmétique constructive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1770-1801-lagrange-legendre-gauss-jeune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1770-1801 : Lagrange, Legendre, Gauss jeune
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1801-1830-gauss-et-les-disquisitiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1801-1830 : Gauss et les Disquisitiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1830-1850-jacobi-dirichlet-eisenstein" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1830-1850 : Jacobi, Dirichlet, Eisenstein
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1840-1860-kummer-et-la-crise-de-la-factorisation-unique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1840-1860 : Kummer et la crise de la factorisation unique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1860-1880-dedekind-et-la-refondation-conceptuelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1860-1880 : Dedekind et la refondation conceptuelle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1880-1900-kronecker-hilbert-et-la-synthese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1880-1900 : Kronecker, Hilbert et la synthèse
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forme-ideale-dune-fiche-du-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forme idéale d'une fiche du projet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#philosophie-du-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Philosophie du projet
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../taxonomy-initial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Taxonomie initiale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Timelines
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Timelines
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../timelines/fermat-to-hilbert-main-timeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fermat à Hilbert
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/gauss-disquisitiones-arithmeticae/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disquisitiones Arithmeticae
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/hilbert-zahlbericht/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zahlbericht
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/cox-primes-of-the-form-x2-ny2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cox
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/edwards-fermat-last-theorem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Edwards
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#principe-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principe général
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#point-de-depart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Point de départ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#point-darrivee-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Point d'arrivée principal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ce-qui-est-inclus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ce qui est inclus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ce qui est inclus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-theorie-elementaire-et-classique-des-nombres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Théorie élémentaire et classique des nombres
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-formes-quadratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Formes quadratiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sommes-exponentielles-caracteres-et-reciprocites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Sommes exponentielles, caractères et réciprocités
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-fonctions-elliptiques-et-multiplication-complexe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Fonctions elliptiques et multiplication complexe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-methodes-analytiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Méthodes analytiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-corps-cyclotomiques-et-fermat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Corps cyclotomiques et Fermat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-theorie-algebrique-des-nombres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Théorie algébrique des nombres
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-dedekind-kronecker-hilbert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Dedekind, Kronecker, Hilbert
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ce-qui-est-secondaire-mais-autorise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ce qui est secondaire mais autorisé
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ce-qui-est-exclu-au-debut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ce qui est exclu au début
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organisation-chronologique-provisoire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organisation chronologique provisoire
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Organisation chronologique provisoire">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1630-1700-fermat-et-les-origines-classiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1630-1700 : Fermat et les origines classiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1700-1770-euler-et-larithmetique-constructive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1700-1770 : Euler et l'arithmétique constructive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1770-1801-lagrange-legendre-gauss-jeune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1770-1801 : Lagrange, Legendre, Gauss jeune
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1801-1830-gauss-et-les-disquisitiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1801-1830 : Gauss et les Disquisitiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1830-1850-jacobi-dirichlet-eisenstein" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1830-1850 : Jacobi, Dirichlet, Eisenstein
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1840-1860-kummer-et-la-crise-de-la-factorisation-unique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1840-1860 : Kummer et la crise de la factorisation unique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1860-1880-dedekind-et-la-refondation-conceptuelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1860-1880 : Dedekind et la refondation conceptuelle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1880-1900-kronecker-hilbert-et-la-synthese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1880-1900 : Kronecker, Hilbert et la synthèse
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forme-ideale-dune-fiche-du-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forme idéale d'une fiche du projet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#philosophie-du-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Philosophie du projet
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="perimetre-du-projet-de-fermat-a-hilbert">Périmètre du projet : de Fermat à Hilbert<a class="headerlink" href="#perimetre-du-projet-de-fermat-a-hilbert" title="Permanent link">&para;</a></h1>
+<h2 id="principe-general">Principe général<a class="headerlink" href="#principe-general" title="Permanent link">&para;</a></h2>
+<p>Le projet adopte un périmètre large.</p>
+<p>Il ne s'agit pas seulement de suivre l'histoire des résultats élémentaires sur les entiers, mais de reconstruire l'évolution technique complète qui mène :</p>
+<ul>
+<li>de l'arithmétique de Fermat ;</li>
+<li>aux congruences d'Euler, Lagrange et Legendre ;</li>
+<li>aux formes quadratiques et aux Disquisitiones Arithmeticae de Gauss ;</li>
+<li>aux sommes de Gauss et de Jacobi ;</li>
+<li>aux fonctions elliptiques et à la multiplication complexe ;</li>
+<li>à Dirichlet et aux méthodes analytiques ;</li>
+<li>à Kummer et aux corps cyclotomiques ;</li>
+<li>à Dedekind et à la théorie des idéaux ;</li>
+<li>à Kronecker et à son Jugendtraum ;</li>
+<li>à Hilbert et au Zahlbericht.</li>
+</ul>
+<h2 id="point-de-depart">Point de départ<a class="headerlink" href="#point-de-depart" title="Permanent link">&para;</a></h2>
+<p>Le point de départ naturel est Fermat, approximativement entre 1630 et 1665.</p>
+<p>On inclut notamment :</p>
+<ul>
+<li>petit théorème de Fermat ;</li>
+<li>théorème des deux carrés ;</li>
+<li>descente infinie ;</li>
+<li>équations diophantiennes ;</li>
+<li>problèmes de représentation par formes quadratiques ;</li>
+<li>dernier théorème de Fermat comme fil rouge.</li>
+</ul>
+<h2 id="point-darrivee-principal">Point d'arrivée principal<a class="headerlink" href="#point-darrivee-principal" title="Permanent link">&para;</a></h2>
+<p>Le point d'arrivée principal est Hilbert autour de 1897, avec le Zahlbericht.</p>
+<p>Le Zahlbericht est traité comme une synthèse structurante de la théorie algébrique des nombres du XIXe siècle.</p>
+<p>On peut aussi inclure, comme ouverture naturelle :</p>
+<ul>
+<li>les problèmes de Hilbert de 1900 ;</li>
+<li>les débuts de la théorie du corps de classes ;</li>
+<li>la clarification moderne de certaines idées du XIXe siècle.</li>
+</ul>
+<h2 id="ce-qui-est-inclus">Ce qui est inclus<a class="headerlink" href="#ce-qui-est-inclus" title="Permanent link">&para;</a></h2>
+<h3 id="1-theorie-elementaire-et-classique-des-nombres">1. Théorie élémentaire et classique des nombres<a class="headerlink" href="#1-theorie-elementaire-et-classique-des-nombres" title="Permanent link">&para;</a></h3>
+<ul>
+<li>divisibilité ;</li>
+<li>congruences ;</li>
+<li>résidus quadratiques ;</li>
+<li>réciprocité quadratique ;</li>
+<li>réciprocités supérieures ;</li>
+<li>équations diophantiennes classiques ;</li>
+<li>sommes de puissances ;</li>
+<li>nombres de Bernoulli ;</li>
+<li>nombres de Fermat ;</li>
+<li>nombres de Mersenne ;</li>
+<li>fractions continues ;</li>
+<li>approximation diophantienne classique.</li>
+</ul>
+<h3 id="2-formes-quadratiques">2. Formes quadratiques<a class="headerlink" href="#2-formes-quadratiques" title="Permanent link">&para;</a></h3>
+<ul>
+<li>formes quadratiques binaires ;</li>
+<li>réduction des formes ;</li>
+<li>composition des formes ;</li>
+<li>genres ;</li>
+<li>classes de formes ;</li>
+<li>représentation des entiers ;</li>
+<li>liens avec les idéaux quadratiques ;</li>
+<li>transition Gauss-Dedekind.</li>
+</ul>
+<h3 id="3-sommes-exponentielles-caracteres-et-reciprocites">3. Sommes exponentielles, caractères et réciprocités<a class="headerlink" href="#3-sommes-exponentielles-caracteres-et-reciprocites" title="Permanent link">&para;</a></h3>
+<ul>
+<li>symbole de Legendre ;</li>
+<li>symbole de Jacobi ;</li>
+<li>caractères multiplicatifs ;</li>
+<li>sommes de Gauss ;</li>
+<li>sommes de Jacobi ;</li>
+<li>réciprocité quadratique ;</li>
+<li>réciprocité cubique ;</li>
+<li>réciprocité biquadratique ;</li>
+<li>lois de réciprocité supérieures.</li>
+</ul>
+<h3 id="4-fonctions-elliptiques-et-multiplication-complexe">4. Fonctions elliptiques et multiplication complexe<a class="headerlink" href="#4-fonctions-elliptiques-et-multiplication-complexe" title="Permanent link">&para;</a></h3>
+<ul>
+<li>intégrales elliptiques ;</li>
+<li>fonctions elliptiques ;</li>
+<li>division de la lemniscate ;</li>
+<li>analogie cyclotomie / lemniscate ;</li>
+<li>multiplication complexe ;</li>
+<li>Kronecker ;</li>
+<li>liens avec la construction de corps abéliens.</li>
+</ul>
+<h3 id="5-methodes-analytiques">5. Méthodes analytiques<a class="headerlink" href="#5-methodes-analytiques" title="Permanent link">&para;</a></h3>
+<ul>
+<li>séries de Dirichlet ;</li>
+<li>caractères de Dirichlet ;</li>
+<li>théorème de Dirichlet sur les progressions arithmétiques ;</li>
+<li>fonctions L ;</li>
+<li>formule analytique du nombre de classes ;</li>
+<li>résidus et produits eulériens dans leur contexte historique ;</li>
+<li>débuts de la théorie analytique des nombres.</li>
+</ul>
+<h3 id="6-corps-cyclotomiques-et-fermat">6. Corps cyclotomiques et Fermat<a class="headerlink" href="#6-corps-cyclotomiques-et-fermat" title="Permanent link">&para;</a></h3>
+<ul>
+<li>factorisation cyclotomique ;</li>
+<li>racines de l'unité ;</li>
+<li>anneaux cyclotomiques ;</li>
+<li>unités cyclotomiques ;</li>
+<li>nombres de classes ;</li>
+<li>nombres réguliers ;</li>
+<li>critère de Kummer ;</li>
+<li>lien avec les nombres de Bernoulli ;</li>
+<li>dernier théorème de Fermat pour les exposants réguliers.</li>
+</ul>
+<h3 id="7-theorie-algebrique-des-nombres">7. Théorie algébrique des nombres<a class="headerlink" href="#7-theorie-algebrique-des-nombres" title="Permanent link">&para;</a></h3>
+<ul>
+<li>entiers algébriques ;</li>
+<li>anneaux d'entiers ;</li>
+<li>idéaux ;</li>
+<li>factorisation unique des idéaux ;</li>
+<li>groupes de classes ;</li>
+<li>unités ;</li>
+<li>théorème des unités de Dirichlet ;</li>
+<li>discriminants ;</li>
+<li>ramification ;</li>
+<li>décomposition des idéaux premiers ;</li>
+<li>corps de nombres ;</li>
+<li>extensions abéliennes dans le contexte pré-corps-de-classes.</li>
+</ul>
+<h3 id="8-dedekind-kronecker-hilbert">8. Dedekind, Kronecker, Hilbert<a class="headerlink" href="#8-dedekind-kronecker-hilbert" title="Permanent link">&para;</a></h3>
+<ul>
+<li>idéaux de Dedekind ;</li>
+<li>domaines de Dedekind ;</li>
+<li>critique et reconstruction de la factorisation unique ;</li>
+<li>programme de Kronecker ;</li>
+<li>Jugendtraum ;</li>
+<li>Zahlbericht de Hilbert ;</li>
+<li>synthèse de la théorie algébrique des nombres ;</li>
+<li>transition vers la théorie du corps de classes.</li>
+</ul>
+<h2 id="ce-qui-est-secondaire-mais-autorise">Ce qui est secondaire mais autorisé<a class="headerlink" href="#ce-qui-est-secondaire-mais-autorise" title="Permanent link">&para;</a></h2>
+<p>Ces sujets ne sont pas centraux, mais peuvent être inclus s'ils éclairent directement la théorie des nombres :</p>
+<ul>
+<li>géométrie algébrique naissante ;</li>
+<li>théorie des courbes algébriques au XIXe siècle ;</li>
+<li>fonctions abéliennes ;</li>
+<li>théorie de Galois ;</li>
+<li>théorie des groupes finis ;</li>
+<li>analyse complexe utilisée par Dirichlet, Riemann ou Weierstrass ;</li>
+<li>théorie des invariants ;</li>
+<li>géométrie des nombres de Minkowski.</li>
+</ul>
+<h2 id="ce-qui-est-exclu-au-debut">Ce qui est exclu au début<a class="headerlink" href="#ce-qui-est-exclu-au-debut" title="Permanent link">&para;</a></h2>
+<p>Pour garder le projet contrôlable, on exclut provisoirement :</p>
+<ul>
+<li>théorie moderne des schémas ;</li>
+<li>cohomologie étale ;</li>
+<li>théorie moderne complète du corps de classes ;</li>
+<li>formes modulaires modernes ;</li>
+<li>preuve de Wiles ;</li>
+<li>géométrie arithmétique postérieure à 1900 ;</li>
+<li>théorie algorithmique moderne des nombres ;</li>
+<li>cryptographie moderne.</li>
+</ul>
+<p>Ces sujets pourront apparaître plus tard dans des notes de comparaison moderne, mais ils ne sont pas prioritaires dans la première version.</p>
+<h2 id="organisation-chronologique-provisoire">Organisation chronologique provisoire<a class="headerlink" href="#organisation-chronologique-provisoire" title="Permanent link">&para;</a></h2>
+<h3 id="1630-1700-fermat-et-les-origines-classiques">1630-1700 : Fermat et les origines classiques<a class="headerlink" href="#1630-1700-fermat-et-les-origines-classiques" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fermat ;</li>
+<li>descente infinie ;</li>
+<li>résidus ;</li>
+<li>deux carrés ;</li>
+<li>équations diophantiennes.</li>
+</ul>
+<h3 id="1700-1770-euler-et-larithmetique-constructive">1700-1770 : Euler et l'arithmétique constructive<a class="headerlink" href="#1700-1770-euler-et-larithmetique-constructive" title="Permanent link">&para;</a></h3>
+<ul>
+<li>congruences ;</li>
+<li>résidus quadratiques ;</li>
+<li>théorème des deux carrés ;</li>
+<li>sommes de puissances ;</li>
+<li>premières fonctions génératrices ;</li>
+<li>partitions ;</li>
+<li>produits infinis.</li>
+</ul>
+<h3 id="1770-1801-lagrange-legendre-gauss-jeune">1770-1801 : Lagrange, Legendre, Gauss jeune<a class="headerlink" href="#1770-1801-lagrange-legendre-gauss-jeune" title="Permanent link">&para;</a></h3>
+<ul>
+<li>formes quadratiques ;</li>
+<li>réduction ;</li>
+<li>réciprocité quadratique ;</li>
+<li>symboles ;</li>
+<li>approximation ;</li>
+<li>premiers systèmes unifiés.</li>
+</ul>
+<h3 id="1801-1830-gauss-et-les-disquisitiones">1801-1830 : Gauss et les Disquisitiones<a class="headerlink" href="#1801-1830-gauss-et-les-disquisitiones" title="Permanent link">&para;</a></h3>
+<ul>
+<li>congruences ;</li>
+<li>réciprocité quadratique ;</li>
+<li>formes quadratiques ;</li>
+<li>composition ;</li>
+<li>genres ;</li>
+<li>cyclotomie ;</li>
+<li>polygones constructibles.</li>
+</ul>
+<h3 id="1830-1850-jacobi-dirichlet-eisenstein">1830-1850 : Jacobi, Dirichlet, Eisenstein<a class="headerlink" href="#1830-1850-jacobi-dirichlet-eisenstein" title="Permanent link">&para;</a></h3>
+<ul>
+<li>sommes de Gauss ;</li>
+<li>sommes de Jacobi ;</li>
+<li>réciprocités supérieures ;</li>
+<li>fonctions elliptiques ;</li>
+<li>séries de Dirichlet ;</li>
+<li>théorème des progressions arithmétiques.</li>
+</ul>
+<h3 id="1840-1860-kummer-et-la-crise-de-la-factorisation-unique">1840-1860 : Kummer et la crise de la factorisation unique<a class="headerlink" href="#1840-1860-kummer-et-la-crise-de-la-factorisation-unique" title="Permanent link">&para;</a></h3>
+<ul>
+<li>corps cyclotomiques ;</li>
+<li>nombres idéaux ;</li>
+<li>unités cyclotomiques ;</li>
+<li>nombres réguliers ;</li>
+<li>nombres de Bernoulli ;</li>
+<li>dernier théorème de Fermat.</li>
+</ul>
+<h3 id="1860-1880-dedekind-et-la-refondation-conceptuelle">1860-1880 : Dedekind et la refondation conceptuelle<a class="headerlink" href="#1860-1880-dedekind-et-la-refondation-conceptuelle" title="Permanent link">&para;</a></h3>
+<ul>
+<li>entiers algébriques ;</li>
+<li>idéaux ;</li>
+<li>anneaux de Dedekind ;</li>
+<li>factorisation des idéaux ;</li>
+<li>groupes de classes ;</li>
+<li>discriminants ;</li>
+<li>ramification.</li>
+</ul>
+<h3 id="1880-1900-kronecker-hilbert-et-la-synthese">1880-1900 : Kronecker, Hilbert et la synthèse<a class="headerlink" href="#1880-1900-kronecker-hilbert-et-la-synthese" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Jugendtraum ;</li>
+<li>multiplication complexe ;</li>
+<li>Zahlbericht ;</li>
+<li>théorie algébrique des nombres systématique ;</li>
+<li>transition vers le corps de classes.</li>
+</ul>
+<h2 id="forme-ideale-dune-fiche-du-projet">Forme idéale d'une fiche du projet<a class="headerlink" href="#forme-ideale-dune-fiche-du-projet" title="Permanent link">&para;</a></h2>
+<p>Chaque fiche importante devrait viser progressivement les rubriques suivantes :</p>
+<ol>
+<li>énoncé moderne ;</li>
+<li>formulation historique ;</li>
+<li>problème moteur ;</li>
+<li>dépendances conceptuelles ;</li>
+<li>preuve ou esquisse ;</li>
+<li>exemples ;</li>
+<li>conséquences ;</li>
+<li>exercices ;</li>
+<li>références ;</li>
+<li>liens vers d'autres fiches.</li>
+</ol>
+<h2 id="philosophie-du-projet">Philosophie du projet<a class="headerlink" href="#philosophie-du-projet" title="Permanent link">&para;</a></h2>
+<p>Le projet doit rendre visible la logique interne de l'histoire :</p>
+<ul>
+<li>quels problèmes poussent à créer de nouveaux objets ;</li>
+<li>pourquoi les anciens outils deviennent insuffisants ;</li>
+<li>comment les concepts modernes émergent ;</li>
+<li>comment les notations actuelles clarifient les idées anciennes ;</li>
+<li>quelles preuves étaient disponibles historiquement ;</li>
+<li>quelles reformulations modernes donnent une meilleure compréhension.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

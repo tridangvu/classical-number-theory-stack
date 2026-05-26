@@ -1,0 +1,222 @@
+{
+  "main": {
+    "id": "fa450c5e9600abe4",
+    "type": "split",
+    "children": [
+      {
+        "id": "56f615b1eecef982",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "18f269ea897bbbe4",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3a9452d05089a7b3",
+    "type": "split",
+    "children": [
+      {
+        "id": "98bc3a02cc2bcefb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ee76e1d125ce389a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c3818685fe9e14e6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "4dc29cd9a24e34e3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4b2f16df79cbc5df",
+    "type": "split",
+    "children": [
+      {
+        "id": "9e6494c1b2ccabb8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b5a987b160829c54",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "templates/source-entry.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for source-entry"
+            }
+          },
+          {
+            "id": "b6836dcb52def74c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "templates/source-entry.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from source-entry"
+            }
+          },
+          {
+            "id": "088a3f498e4d7664",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "7b2e40b0f66f75d8",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "37b15cbed4a6644f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "templates/source-entry.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of source-entry"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "18f269ea897bbbe4",
+  "lastOpenFiles": [
+    "entries/fermat-little-theorem.md",
+    "site/search/search_index.json",
+    "site/search",
+    "site/timelines/fermat-to-hilbert-main-timeline/index.html",
+    "site/timelines/fermat-to-hilbert-main-timeline",
+    "site/timelines",
+    "site/sources/hilbert-zahlbericht/index.html",
+    "site/sources/hilbert-zahlbericht",
+    "site/sources/gauss-disquisitiones-arithmeticae/index.html",
+    "site/sources/gauss-disquisitiones-arithmeticae",
+    "site/sources/edwards-fermat-last-theorem/index.html",
+    "site/assets/images/favicon.png",
+    "sources/edwards-fermat-last-theorem.md",
+    "sources/cox-primes-of-the-form-x2-ny2.md",
+    "sources/hilbert-zahlbericht.md",
+    "sources/gauss-disquisitiones-arithmeticae.md",
+    "docs/project-map.md",
+    "docs/timelines/fermat-to-hilbert-main-timeline.md",
+    "docs/notes/taxonomy-initial.md",
+    "docs/notes/scope-fermat-to-hilbert.md",
+    "docs/entries/two-squares-theorem.md",
+    "docs/entries/quadratic-reciprocity.md",
+    "docs/entries/quadratic-gauss-sums.md",
+    "docs/entries/kummer-regular-primes.md",
+    "docs/entries/hilbert-zahlbericht.md",
+    "docs/entries/gauss-composition.md",
+    "docs/entries/fermat-little-theorem.md",
+    "docs/entries/dirichlet-unit-theorem.md",
+    "docs/entries/dirichlet-arithmetic-progressions.md",
+    "docs/entries/dedekind-ideal-factorization.md",
+    "docs/index.md",
+    "entries/gauss-composition.md",
+    "entries/hilbert-zahlbericht.md",
+    "entries/two-squares-theorem.md",
+    "entries/quadratic-reciprocity.md",
+    "entries/quadratic-gauss-sums.md",
+    "entries/kummer-regular-primes.md"
+  ]
+}

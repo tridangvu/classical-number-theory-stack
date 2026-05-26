@@ -1,0 +1,4733 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Histoire technique de la théorie des nombres de Fermat à Hilbert">
+      
+      
+        <meta name="author" content="Tri">
+      
+      
+        <link rel="canonical" href="https://tridangvu.github.io/classical-number-theory-stack/entries/two-squares-theorem/">
+      
+      
+        <link rel="prev" href="../../project-map/">
+      
+      
+        <link rel="next" href="../fermat-little-theorem/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Théorème des deux carrés - Classical Number Theory Stack</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#theoreme-des-deux-carres" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Classical Number Theory Stack" class="md-header__button md-logo" aria-label="Classical Number Theory Stack" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Classical Number Theory Stack
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Théorème des deux carrés
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../project-map/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Carte du projet
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Entrées
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../notes/scope-fermat-to-hilbert/" class="md-tabs__link">
+          
+  
+  
+  Notes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../timelines/fermat-to-hilbert-main-timeline/" class="md-tabs__link">
+          
+  
+  
+  Timelines
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../sources/gauss-disquisitiones-arithmeticae/" class="md-tabs__link">
+          
+  
+  
+  Sources
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Classical Number Theory Stack" class="md-nav__button md-logo" aria-label="Classical Number Theory Stack" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Classical Number Theory Stack
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Carte du projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrées
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Entrées
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Théorème des deux carrés
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--expanded-draft"></span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Théorème des deux carrés
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--expanded-draft"></span>
+  
+
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-resume-court" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Résumé court
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-enonces-modernes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Énoncés modernes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Énoncés modernes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-version-pour-les-nombres-premiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Version pour les nombres premiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-version-generale-pour-les-entiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Version générale pour les entiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-version-multiplicative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Version multiplicative
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-version-en-termes-de-lanneau-mathbf-zi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Version en termes de l'anneau \(\mathbf Z[i]\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-contexte-historique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Contexte historique
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Contexte historique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-fermat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Fermat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-euler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Euler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-lagrange-legendre-gauss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Lagrange, Legendre, Gauss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-lecture-moderne" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Lecture moderne
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-motivations-conceptuelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Motivations conceptuelles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Motivations conceptuelles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-pourquoi-sinteresser-aux-nombres-de-la-forme-x2y2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Pourquoi s'intéresser aux nombres de la forme \(x^2+y^2\) ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-pourquoi-la-congruence-modulo-4-apparait-elle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Pourquoi la congruence modulo \(4\) apparaît-elle ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-pourquoi-les-premiers-pequiv-1pmod-4-sont-ils-exactement-les-bons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Pourquoi les premiers \(p\equiv 1\pmod 4\) sont-ils exactement les bons ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-pourquoi-la-factorisation-dans-mathbf-zi-rend-elle-le-resultat-naturel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. Pourquoi la factorisation dans \(\mathbf Z[i]\) rend-elle le résultat naturel ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-pourquoi-ce-resultat-annonce-t-il-la-theorie-algebrique-des-nombres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5. Pourquoi ce résultat annonce-t-il la théorie algébrique des nombres ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-demonstration-1-necessite-elementaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Démonstration 1 — Nécessité élémentaire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-demonstration-2-identite-des-deux-carres-et-multiplicativite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Démonstration 2 — Identité des deux carrés et multiplicativité
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-demonstration-3-lemme-des-premiers-3pmod-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Démonstration 3 — Lemme des premiers \(3\pmod 4\)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Démonstration 3 — Lemme des premiers \(3\pmod 4\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-critere-utilise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1. Critère utilisé
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-lemme-fondamental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2. Lemme fondamental
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-consequence-sur-les-exposants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3. Conséquence sur les exposants
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-demonstration-4-existence-pour-pequiv-1pmod-4-par-descente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Démonstration 4 — Existence pour \(p\equiv 1\pmod 4\) par descente
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Démonstration 4 — Existence pour \(p\equiv 1\pmod 4\) par descente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-premiere-etape-obtenir-un-multiple-de-p-somme-de-deux-carres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1. Première étape : obtenir un multiple de \(p\) somme de deux carrés
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-choix-minimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2. Choix minimal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-reduction-des-coordonnees-modulo-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3. Réduction des coordonnées modulo \(m\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-construction-dune-representation-plus-petite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4. Construction d'une représentation plus petite
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-demonstration-5-preuve-moderne-par-les-entiers-de-gauss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Démonstration 5 — Preuve moderne par les entiers de Gauss
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Démonstration 5 — Preuve moderne par les entiers de Gauss">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1. Définition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-proprietes-de-la-norme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2. Propriétés de la norme
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-euclidianite-de-mathbf-zi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3. Euclidianité de \(\mathbf Z[i]\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-factorisation-de-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4. Factorisation de \(p\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-comportement-des-premiers-dans-mathbf-zi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5. Comportement des premiers dans \(\mathbf Z[i]\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-demonstration-6-lecture-par-les-formes-quadratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Démonstration 6 — Lecture par les formes quadratiques
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-version-generale-du-theoreme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Version générale du théorème
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Version générale du théorème">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-necessite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1. Nécessité
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-suffisance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2. Suffisance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-exemples-calcules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Exemples calculés
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Exemples calculés">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-le-nombre-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1. Le nombre \(5\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-le-nombre-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2. Le nombre \(13\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-le-nombre-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3. Le nombre \(17\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-le-nombre-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.4. Le nombre \(29\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125-le-nombre-65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.5. Le nombre \(65\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#126-le-nombre-325" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.6. Le nombre \(325\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#127-un-entier-non-representable-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.7. Un entier non représentable : \(21\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#128-role-des-exposants-pairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.8. Rôle des exposants pairs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-dependances-conceptuelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Dépendances conceptuelles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Dépendances conceptuelles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#congruences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Congruences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#residus-quadratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Résidus quadratiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critere-deuler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critère d'Euler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descente-infinie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descente infinie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identite-des-deux-carres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identité des deux carrés
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#factorisation-unique-dans-mathbf-z" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Factorisation unique dans \(\mathbf Z\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anneau-mathbf-zi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anneau \(\mathbf Z[i]\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#norme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Norme
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anneau-euclidien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anneau euclidien
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formes-quadratiques-binaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formes quadratiques binaires
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reciprocite-quadratique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Réciprocité quadratique
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-consequences-et-prolongements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Conséquences et prolongements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Conséquences et prolongements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-vers-les-formes-quadratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1. Vers les formes quadratiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-vers-gauss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2. Vers Gauss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-vers-dedekind" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3. Vers Dedekind
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144-vers-la-theorie-du-corps-de-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.4. Vers la théorie du corps de classes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-exercices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Exercices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Exercices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#niveau-1-congruences-elementaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Niveau 1 — Congruences élémentaires
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveau-2-identite-des-deux-carres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Niveau 2 — Identité des deux carrés
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveau-3-premiers-3pmod-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Niveau 3 — Premiers \(3\pmod 4\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveau-4-descente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Niveau 4 — Descente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveau-5-entiers-de-gauss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Niveau 5 — Entiers de Gauss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveau-6-formes-quadratiques-et-histoire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Niveau 6 — Formes quadratiques et histoire
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-resultats-utilises-sans-demonstration-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Résultats utilisés sans démonstration complète
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. Résultats utilisés sans démonstration complète">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-critere-deuler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.1. Critère d'Euler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-existence-dune-racine-carree-de-1-modulo-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.2. Existence d'une racine carrée de \(-1\) modulo \(p\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163-anneau-euclidien-implique-factoriel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.3. Anneau euclidien implique factoriel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#164-euclidianite-de-mathbf-zi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.4. Euclidianité de \(\mathbf Z[i]\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Références
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17. Références">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fermat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fermat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#euler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Euler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gauss-disquisitiones-arithmeticae" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gauss, Disquisitiones Arithmeticae
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#david-a-cox-primes-of-the-form-x2ny2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        David A. Cox, Primes of the Form \(x^2+ny^2\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#andre-weil-number-theory-an-approach-through-history-from-hammurapi-to-legendre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        André Weil, Number Theory: An Approach Through History from Hammurapi to Legendre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harold-m-edwards-fermats-last-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Harold M. Edwards, Fermat's Last Theorem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ireland-rosen-a-classical-introduction-to-modern-number-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ireland-Rosen, A Classical Introduction to Modern Number Theory
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-liens-internes-suggeres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Liens internes suggérés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-version-ultra-courte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Version ultra-courte
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fermat-little-theorem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Petit théorème de Fermat
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quadratic-reciprocity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Réciprocité quadratique
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gauss-composition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Composition de Gauss
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dirichlet-arithmetic-progressions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Théorème de Dirichlet
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quadratic-gauss-sums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sommes de Gauss quadratiques
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kummer-regular-primes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Critère de Kummer
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dedekind-ideal-factorization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Factorisation des idéaux
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dirichlet-unit-theorem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Théorème des unités
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hilbert-zahlbericht/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zahlbericht
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/scope-fermat-to-hilbert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Périmètre
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/taxonomy-initial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Taxonomie initiale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Timelines
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Timelines
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../timelines/fermat-to-hilbert-main-timeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fermat à Hilbert
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/gauss-disquisitiones-arithmeticae/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disquisitiones Arithmeticae
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/hilbert-zahlbericht/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zahlbericht
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/cox-primes-of-the-form-x2-ny2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cox
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/edwards-fermat-last-theorem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Edwards
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-resume-court" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Résumé court
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-enonces-modernes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Énoncés modernes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Énoncés modernes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-version-pour-les-nombres-premiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Version pour les nombres premiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-version-generale-pour-les-entiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Version générale pour les entiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-version-multiplicative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Version multiplicative
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-version-en-termes-de-lanneau-mathbf-zi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Version en termes de l'anneau \(\mathbf Z[i]\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-contexte-historique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Contexte historique
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Contexte historique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-fermat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Fermat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-euler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Euler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-lagrange-legendre-gauss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Lagrange, Legendre, Gauss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-lecture-moderne" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Lecture moderne
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-motivations-conceptuelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Motivations conceptuelles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Motivations conceptuelles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-pourquoi-sinteresser-aux-nombres-de-la-forme-x2y2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Pourquoi s'intéresser aux nombres de la forme \(x^2+y^2\) ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-pourquoi-la-congruence-modulo-4-apparait-elle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Pourquoi la congruence modulo \(4\) apparaît-elle ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-pourquoi-les-premiers-pequiv-1pmod-4-sont-ils-exactement-les-bons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Pourquoi les premiers \(p\equiv 1\pmod 4\) sont-ils exactement les bons ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-pourquoi-la-factorisation-dans-mathbf-zi-rend-elle-le-resultat-naturel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. Pourquoi la factorisation dans \(\mathbf Z[i]\) rend-elle le résultat naturel ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-pourquoi-ce-resultat-annonce-t-il-la-theorie-algebrique-des-nombres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5. Pourquoi ce résultat annonce-t-il la théorie algébrique des nombres ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-demonstration-1-necessite-elementaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Démonstration 1 — Nécessité élémentaire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-demonstration-2-identite-des-deux-carres-et-multiplicativite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Démonstration 2 — Identité des deux carrés et multiplicativité
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-demonstration-3-lemme-des-premiers-3pmod-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Démonstration 3 — Lemme des premiers \(3\pmod 4\)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Démonstration 3 — Lemme des premiers \(3\pmod 4\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-critere-utilise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1. Critère utilisé
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-lemme-fondamental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2. Lemme fondamental
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-consequence-sur-les-exposants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3. Conséquence sur les exposants
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-demonstration-4-existence-pour-pequiv-1pmod-4-par-descente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Démonstration 4 — Existence pour \(p\equiv 1\pmod 4\) par descente
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Démonstration 4 — Existence pour \(p\equiv 1\pmod 4\) par descente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-premiere-etape-obtenir-un-multiple-de-p-somme-de-deux-carres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1. Première étape : obtenir un multiple de \(p\) somme de deux carrés
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-choix-minimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2. Choix minimal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-reduction-des-coordonnees-modulo-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3. Réduction des coordonnées modulo \(m\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-construction-dune-representation-plus-petite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4. Construction d'une représentation plus petite
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-demonstration-5-preuve-moderne-par-les-entiers-de-gauss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Démonstration 5 — Preuve moderne par les entiers de Gauss
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Démonstration 5 — Preuve moderne par les entiers de Gauss">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1. Définition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-proprietes-de-la-norme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2. Propriétés de la norme
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-euclidianite-de-mathbf-zi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3. Euclidianité de \(\mathbf Z[i]\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-factorisation-de-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4. Factorisation de \(p\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-comportement-des-premiers-dans-mathbf-zi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.5. Comportement des premiers dans \(\mathbf Z[i]\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-demonstration-6-lecture-par-les-formes-quadratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Démonstration 6 — Lecture par les formes quadratiques
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-version-generale-du-theoreme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Version générale du théorème
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Version générale du théorème">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-necessite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1. Nécessité
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-suffisance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2. Suffisance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-exemples-calcules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Exemples calculés
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Exemples calculés">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-le-nombre-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1. Le nombre \(5\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-le-nombre-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2. Le nombre \(13\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-le-nombre-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3. Le nombre \(17\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-le-nombre-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.4. Le nombre \(29\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125-le-nombre-65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.5. Le nombre \(65\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#126-le-nombre-325" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.6. Le nombre \(325\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#127-un-entier-non-representable-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.7. Un entier non représentable : \(21\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#128-role-des-exposants-pairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.8. Rôle des exposants pairs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-dependances-conceptuelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Dépendances conceptuelles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Dépendances conceptuelles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#congruences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Congruences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#residus-quadratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Résidus quadratiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critere-deuler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critère d'Euler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descente-infinie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descente infinie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identite-des-deux-carres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identité des deux carrés
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#factorisation-unique-dans-mathbf-z" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Factorisation unique dans \(\mathbf Z\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anneau-mathbf-zi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anneau \(\mathbf Z[i]\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#norme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Norme
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anneau-euclidien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anneau euclidien
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formes-quadratiques-binaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formes quadratiques binaires
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reciprocite-quadratique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Réciprocité quadratique
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-consequences-et-prolongements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Conséquences et prolongements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Conséquences et prolongements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-vers-les-formes-quadratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1. Vers les formes quadratiques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-vers-gauss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2. Vers Gauss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-vers-dedekind" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3. Vers Dedekind
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144-vers-la-theorie-du-corps-de-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.4. Vers la théorie du corps de classes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-exercices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Exercices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Exercices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#niveau-1-congruences-elementaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Niveau 1 — Congruences élémentaires
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveau-2-identite-des-deux-carres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Niveau 2 — Identité des deux carrés
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveau-3-premiers-3pmod-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Niveau 3 — Premiers \(3\pmod 4\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveau-4-descente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Niveau 4 — Descente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveau-5-entiers-de-gauss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Niveau 5 — Entiers de Gauss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveau-6-formes-quadratiques-et-histoire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Niveau 6 — Formes quadratiques et histoire
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-resultats-utilises-sans-demonstration-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Résultats utilisés sans démonstration complète
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. Résultats utilisés sans démonstration complète">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-critere-deuler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.1. Critère d'Euler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-existence-dune-racine-carree-de-1-modulo-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.2. Existence d'une racine carrée de \(-1\) modulo \(p\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163-anneau-euclidien-implique-factoriel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.3. Anneau euclidien implique factoriel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#164-euclidianite-de-mathbf-zi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.4. Euclidianité de \(\mathbf Z[i]\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Références
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17. Références">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fermat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fermat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#euler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Euler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gauss-disquisitiones-arithmeticae" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gauss, Disquisitiones Arithmeticae
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#david-a-cox-primes-of-the-form-x2ny2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        David A. Cox, Primes of the Form \(x^2+ny^2\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#andre-weil-number-theory-an-approach-through-history-from-hammurapi-to-legendre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        André Weil, Number Theory: An Approach Through History from Hammurapi to Legendre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harold-m-edwards-fermats-last-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Harold M. Edwards, Fermat's Last Theorem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ireland-rosen-a-classical-introduction-to-modern-number-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ireland-Rosen, A Classical Introduction to Modern Number Theory
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-liens-internes-suggeres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Liens internes suggérés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-version-ultra-courte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Version ultra-courte
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="theoreme-des-deux-carres">Théorème des deux carrés<a class="headerlink" href="#theoreme-des-deux-carres" title="Permanent link">&para;</a></h1>
+<h2 id="1-resume-court">1. Résumé court<a class="headerlink" href="#1-resume-court" title="Permanent link">&para;</a></h2>
+<p>Le théorème des deux carrés caractérise les entiers qui peuvent s'écrire sous la forme <span class="arithmatex">\(x^2+y^2\)</span> avec <span class="arithmatex">\(x,y\in\mathbf Z\)</span>.</p>
+<p>Dans sa forme première, il affirme qu'un nombre premier impair <span class="arithmatex">\(p\)</span> est somme de deux carrés si et seulement si <span class="arithmatex">\(p\equiv 1\pmod 4\)</span>. Le cas <span class="arithmatex">\(p=2\)</span> est exceptionnel mais favorable, puisque <span class="arithmatex">\(2=1^2+1^2\)</span>.</p>
+<p>Dans sa forme générale, il affirme qu'un entier positif <span class="arithmatex">\(n\)</span> est somme de deux carrés si et seulement si tout premier <span class="arithmatex">\(q\equiv 3\pmod 4\)</span> apparaît avec exposant pair dans la factorisation première de <span class="arithmatex">\(n\)</span>.</p>
+<p>Historiquement, le résultat est associé à Fermat, qui l'énonce au XVIIe siècle, puis à Euler, qui en donne une démonstration au XVIIIe siècle. Il devient ensuite un exemple fondamental dans la théorie des formes quadratiques de Lagrange, Legendre et surtout Gauss.</p>
+<p>Conceptuellement, ce théorème est un premier prototype de la question générale : quels entiers sont représentés par une forme quadratique donnée ?</p>
+<p>Il possède plusieurs preuves importantes : preuve par congruences et descente, preuve par l'identité des deux carrés, preuve par les entiers de Gauss <span class="arithmatex">\(\mathbf Z[i]\)</span>, preuve par les formes quadratiques.</p>
+<p>La preuve moderne par <span class="arithmatex">\(\mathbf Z[i]\)</span> montre que <span class="arithmatex">\(x^2+y^2\)</span> est une norme :</p>
+<div class="arithmatex">\[
+x^2+y^2=N(x+iy).
+\]</div>
+<p>Le théorème devient alors une question de factorisation dans un anneau plus grand que <span class="arithmatex">\(\mathbf Z\)</span>. C'est précisément le type d'idée qui mènera, au XIXe siècle, à Kummer, Dedekind, puis à la théorie algébrique des nombres.</p>
+<p>Fil historique :</p>
+<div class="arithmatex">\[
+\text{Fermat}
+\longrightarrow
+\text{Euler}
+\longrightarrow
+\text{Gauss}
+\longrightarrow
+\mathbf Z[i]
+\longrightarrow
+\text{Dedekind}.
+\]</div>
+<hr />
+<h2 id="2-enonces-modernes">2. Énoncés modernes<a class="headerlink" href="#2-enonces-modernes" title="Permanent link">&para;</a></h2>
+<h3 id="21-version-pour-les-nombres-premiers">2.1. Version pour les nombres premiers<a class="headerlink" href="#21-version-pour-les-nombres-premiers" title="Permanent link">&para;</a></h3>
+<p><strong>Théorème.</strong> Soit <span class="arithmatex">\(p\)</span> un nombre premier. Alors :</p>
+<ol>
+<li><span class="arithmatex">\(2=1^2+1^2\)</span> ;</li>
+<li>si <span class="arithmatex">\(p\)</span> est impair, alors <span class="arithmatex">\(p\)</span> est de la forme <span class="arithmatex">\(p=x^2+y^2\)</span> avec <span class="arithmatex">\(x,y\in\mathbf Z\)</span> si et seulement si</li>
+</ol>
+<div class="arithmatex">\[
+p\equiv 1\pmod 4.
+\]</div>
+<p>Autrement dit, les nombres premiers représentés par la forme <span class="arithmatex">\(x^2+y^2\)</span> sont exactement :</p>
+<div class="arithmatex">\[
+2
+\quad\text{et les premiers impairs congrus à}\quad
+1\pmod 4.
+\]</div>
+<p>Dans la suite, on évitera autant que possible de cacher le cas <span class="arithmatex">\(p=2\)</span>, car il explique pourquoi la formulation générale doit traiter séparément les premiers <span class="arithmatex">\(2\)</span>, les premiers <span class="arithmatex">\(1\pmod 4\)</span> et les premiers <span class="arithmatex">\(3\pmod 4\)</span>.</p>
+<h3 id="22-version-generale-pour-les-entiers">2.2. Version générale pour les entiers<a class="headerlink" href="#22-version-generale-pour-les-entiers" title="Permanent link">&para;</a></h3>
+<p><strong>Théorème.</strong> Soit <span class="arithmatex">\(n\geq 1\)</span> un entier. Écrivons sa factorisation première sous la forme</p>
+<div class="arithmatex">\[
+n=2^a
+\prod_{p\equiv 1\pmod 4}p^{\alpha_p}
+\prod_{q\equiv 3\pmod 4}q^{\beta_q}.
+\]</div>
+<p>Alors <span class="arithmatex">\(n\)</span> est somme de deux carrés si et seulement si, pour tout premier <span class="arithmatex">\(q\equiv 3\pmod 4\)</span>, l'exposant <span class="arithmatex">\(\beta_q\)</span> est pair.</p>
+<p>Donc les premiers <span class="arithmatex">\(1\pmod 4\)</span> peuvent apparaître avec n'importe quel exposant ; le premier <span class="arithmatex">\(2\)</span> aussi ; mais les premiers <span class="arithmatex">\(3\pmod 4\)</span> doivent apparaître avec exposant pair.</p>
+<h3 id="23-version-multiplicative">2.3. Version multiplicative<a class="headerlink" href="#23-version-multiplicative" title="Permanent link">&para;</a></h3>
+<p>La structure multiplicative repose sur l'identité de Brahmagupta-Fibonacci :</p>
+<div class="arithmatex">\[
+(a^2+b^2)(c^2+d^2)
+=
+(ac-bd)^2+(ad+bc)^2.
+\]</div>
+<p>Elle signifie que le produit de deux sommes de deux carrés est encore une somme de deux carrés.</p>
+<p>Cette identité est fondamentale pour passer du cas des nombres premiers au cas des entiers généraux. En effet, si chaque facteur premier autorisé est une somme de deux carrés, alors tout produit de tels facteurs l'est encore.</p>
+<h3 id="24-version-en-termes-de-lanneau-mathbf-zi">2.4. Version en termes de l'anneau <span class="arithmatex">\(\mathbf Z[i]\)</span><a class="headerlink" href="#24-version-en-termes-de-lanneau-mathbf-zi" title="Permanent link">&para;</a></h3>
+<p>On introduit l'anneau des entiers de Gauss :</p>
+<div class="arithmatex">\[
+\mathbf Z[i]=\{a+bi:a,b\in\mathbf Z\}.
+\]</div>
+<p>On définit la norme par</p>
+<div class="arithmatex">\[
+N(a+bi)=a^2+b^2.
+\]</div>
+<p>Alors dire que <span class="arithmatex">\(n\)</span> est somme de deux carrés revient à dire qu'il existe <span class="arithmatex">\(\alpha\in\mathbf Z[i]\)</span> tel que</p>
+<div class="arithmatex">\[
+n=N(\alpha).
+\]</div>
+<p>Ainsi, la question devient une question de normes dans l'anneau <span class="arithmatex">\(\mathbf Z[i]\)</span>.</p>
+<hr />
+<h2 id="3-contexte-historique">3. Contexte historique<a class="headerlink" href="#3-contexte-historique" title="Permanent link">&para;</a></h2>
+<h3 id="31-fermat">3.1. Fermat<a class="headerlink" href="#31-fermat" title="Permanent link">&para;</a></h3>
+<p>Fermat annonce le théorème selon lequel tout nombre premier congru à <span class="arithmatex">\(1\)</span> modulo <span class="arithmatex">\(4\)</span> est somme de deux carrés. Il affirme aussi de nombreux résultats voisins sur les nombres représentés par des formes comme <span class="arithmatex">\(x^2+2y^2\)</span>, <span class="arithmatex">\(x^2+3y^2\)</span>, etc.</p>
+<p>La question est naturelle dans l'arithmétique du XVIIe siècle parce qu'on cherche à comprendre non seulement les diviseurs des entiers, mais aussi les formes sous lesquelles les entiers peuvent apparaître. Le problème n'est pas seulement :</p>
+<ul>
+<li>quels sont les diviseurs de <span class="arithmatex">\(n\)</span> ?</li>
+</ul>
+<p>mais aussi :</p>
+<ul>
+<li>existe-t-il <span class="arithmatex">\(x,y\)</span> tels que <span class="arithmatex">\(n=x^2+y^2\)</span> ?</li>
+<li>existe-t-il <span class="arithmatex">\(x,y\)</span> tels que <span class="arithmatex">\(n=x^2+2y^2\)</span> ?</li>
+<li>existe-t-il <span class="arithmatex">\(x,y\)</span> tels que <span class="arithmatex">\(n=x^2+ny^2\)</span> ?</li>
+</ul>
+<p>Fermat utilise la descente infinie comme méthode fondamentale. L'idée générale de la descente est la suivante : pour montrer qu'une certaine situation impossible n'existe pas, on suppose qu'elle existe avec une solution minimale, puis on construit une solution strictement plus petite. Cela contredit le principe du bon ordre des entiers positifs.</p>
+<p>Dans le cas du théorème des deux carrés, la descente apparaît dans la preuve d'existence : à partir d'une représentation d'un multiple de <span class="arithmatex">\(p\)</span> comme somme de deux carrés, on descend vers une représentation plus petite jusqu'à obtenir <span class="arithmatex">\(p\)</span> lui-même.</p>
+<h3 id="32-euler">3.2. Euler<a class="headerlink" href="#32-euler" title="Permanent link">&para;</a></h3>
+<p>Euler joue un rôle décisif parce qu'il donne une démonstration effective de résultats annoncés par Fermat.</p>
+<p>La difficulté du théorème des deux carrés est la partie d'existence :</p>
+<div class="arithmatex">\[
+p\equiv 1\pmod 4
+\quad\Longrightarrow\quad
+p=x^2+y^2.
+\]</div>
+<p>La nécessité est facile : si <span class="arithmatex">\(p=x^2+y^2\)</span> est impair, alors l'un de <span class="arithmatex">\(x,y\)</span> est pair et l'autre impair, donc <span class="arithmatex">\(p\equiv 1\pmod 4\)</span>.</p>
+<p>Mais l'existence est plus profonde. Il faut montrer qu'une condition de congruence locale modulo <span class="arithmatex">\(4\)</span> force une représentation globale exacte par une somme de carrés.</p>
+<p>Euler utilise essentiellement deux outils :</p>
+<ol>
+<li>l'identité des deux carrés ;</li>
+<li>une forme de descente.</li>
+</ol>
+<p>L'identité des deux carrés permet de contrôler les produits. La descente permet de passer d'une représentation d'un multiple de <span class="arithmatex">\(p\)</span> à une représentation de <span class="arithmatex">\(p\)</span> lui-même.</p>
+<h3 id="33-lagrange-legendre-gauss">3.3. Lagrange, Legendre, Gauss<a class="headerlink" href="#33-lagrange-legendre-gauss" title="Permanent link">&para;</a></h3>
+<p>Après Fermat et Euler, le théorème change de statut.</p>
+<p>Il n'est plus seulement un résultat isolé sur <span class="arithmatex">\(x^2+y^2\)</span>. Il devient un cas particulier du grand problème suivant :</p>
+<blockquote>
+<p>Étant donnée une forme quadratique entière, quels entiers représente-t-elle ?</p>
+</blockquote>
+<p>La forme <span class="arithmatex">\(x^2+y^2\)</span> est une forme quadratique binaire de discriminant <span class="arithmatex">\(-4\)</span>. Plus généralement, une forme quadratique binaire entière est une expression</p>
+<div class="arithmatex">\[
+ax^2+bxy+cy^2.
+\]</div>
+<p>Son discriminant est</p>
+<div class="arithmatex">\[
+D=b^2-4ac.
+\]</div>
+<p>Pour <span class="arithmatex">\(x^2+y^2\)</span>, on a <span class="arithmatex">\(a=1\)</span>, <span class="arithmatex">\(b=0\)</span>, <span class="arithmatex">\(c=1\)</span>, donc</p>
+<div class="arithmatex">\[
+D=-4.
+\]</div>
+<p>Lagrange développe la réduction des formes quadratiques. Legendre introduit son symbole et formule la réciprocité quadratique. Gauss, dans les Disquisitiones Arithmeticae, unifie profondément ces idées : congruences, résidus quadratiques, formes quadratiques, composition, genres.</p>
+<p>Dans cette perspective, le théorème des deux carrés est le premier exemple paradigmatique d'une théorie de représentation des nombres par formes quadratiques.</p>
+<h3 id="34-lecture-moderne">3.4. Lecture moderne<a class="headerlink" href="#34-lecture-moderne" title="Permanent link">&para;</a></h3>
+<p>La lecture moderne par <span class="arithmatex">\(\mathbf Z[i]\)</span> clarifie brutalement le résultat.</p>
+<p>On observe que</p>
+<div class="arithmatex">\[
+x^2+y^2=(x+iy)(x-iy).
+\]</div>
+<p>Ainsi, représenter un entier comme somme de deux carrés revient à le représenter comme norme d'un entier de Gauss.</p>
+<p>Le résultat devient alors une question de factorisation dans l'anneau <span class="arithmatex">\(\mathbf Z[i]\)</span>.</p>
+<p>Cette idée annonce Dedekind : lorsqu'un problème de divisibilité dans <span class="arithmatex">\(\mathbf Z\)</span> devient difficile, on agrandit l'anneau. Mais cet agrandissement crée une nouvelle question : la factorisation unique reste-t-elle vraie ?</p>
+<p>Dans <span class="arithmatex">\(\mathbf Z[i]\)</span>, elle reste vraie, car <span class="arithmatex">\(\mathbf Z[i]\)</span> est un anneau euclidien. Dans des anneaux plus compliqués, elle échoue, et cet échec conduira à Kummer puis aux idéaux de Dedekind.</p>
+<hr />
+<h2 id="4-motivations-conceptuelles">4. Motivations conceptuelles<a class="headerlink" href="#4-motivations-conceptuelles" title="Permanent link">&para;</a></h2>
+<h3 id="41-pourquoi-sinteresser-aux-nombres-de-la-forme-x2y2">4.1. Pourquoi s'intéresser aux nombres de la forme <span class="arithmatex">\(x^2+y^2\)</span> ?<a class="headerlink" href="#41-pourquoi-sinteresser-aux-nombres-de-la-forme-x2y2" title="Permanent link">&para;</a></h3>
+<p>Parce que c'est l'un des premiers problèmes naturels de représentation.</p>
+<p>La divisibilité demande : quels sont les facteurs de <span class="arithmatex">\(n\)</span> ?</p>
+<p>La représentation demande : quelles formes arithmétiques peuvent produire <span class="arithmatex">\(n\)</span> ?</p>
+<p>La forme <span class="arithmatex">\(x^2+y^2\)</span> est l'une des plus simples après les carrés eux-mêmes. Elle relie :</p>
+<ul>
+<li>les carrés ;</li>
+<li>la géométrie euclidienne ;</li>
+<li>les distances ;</li>
+<li>les triplets pythagoriciens ;</li>
+<li>les formes quadratiques ;</li>
+<li>les normes dans <span class="arithmatex">\(\mathbf Z[i]\)</span>.</li>
+</ul>
+<h3 id="42-pourquoi-la-congruence-modulo-4-apparait-elle">4.2. Pourquoi la congruence modulo <span class="arithmatex">\(4\)</span> apparaît-elle ?<a class="headerlink" href="#42-pourquoi-la-congruence-modulo-4-apparait-elle" title="Permanent link">&para;</a></h3>
+<p>Parce que les carrés modulo <span class="arithmatex">\(4\)</span> sont très contraints.</p>
+<p>Pour tout entier <span class="arithmatex">\(x\)</span> :</p>
+<ul>
+<li>si <span class="arithmatex">\(x\)</span> est pair, alors <span class="arithmatex">\(x^2\equiv 0\pmod 4\)</span> ;</li>
+<li>si <span class="arithmatex">\(x\)</span> est impair, alors <span class="arithmatex">\(x^2\equiv 1\pmod 4\)</span>.</li>
+</ul>
+<p>Donc une somme de deux carrés modulo <span class="arithmatex">\(4\)</span> peut être congrue à <span class="arithmatex">\(0\)</span>, <span class="arithmatex">\(1\)</span> ou <span class="arithmatex">\(2\)</span>, mais jamais à <span class="arithmatex">\(3\)</span>.</p>
+<p>En particulier, un nombre premier impair somme de deux carrés ne peut pas être congru à <span class="arithmatex">\(3\)</span> modulo <span class="arithmatex">\(4\)</span>. Il doit donc être congru à <span class="arithmatex">\(1\)</span> modulo <span class="arithmatex">\(4\)</span>.</p>
+<h3 id="43-pourquoi-les-premiers-pequiv-1pmod-4-sont-ils-exactement-les-bons">4.3. Pourquoi les premiers <span class="arithmatex">\(p\equiv 1\pmod 4\)</span> sont-ils exactement les bons ?<a class="headerlink" href="#43-pourquoi-les-premiers-pequiv-1pmod-4-sont-ils-exactement-les-bons" title="Permanent link">&para;</a></h3>
+<p>La condition <span class="arithmatex">\(p\equiv 1\pmod 4\)</span> équivaut au fait que <span class="arithmatex">\(-1\)</span> est un carré modulo <span class="arithmatex">\(p\)</span>.</p>
+<p>Autrement dit, il existe <span class="arithmatex">\(u\)</span> tel que</p>
+<div class="arithmatex">\[
+u^2\equiv -1\pmod p.
+\]</div>
+<p>Cette congruence dit que <span class="arithmatex">\(p\)</span> divise <span class="arithmatex">\(u^2+1\)</span>. Donc un multiple de <span class="arithmatex">\(p\)</span> est déjà somme de deux carrés :</p>
+<div class="arithmatex">\[
+u^2+1^2.
+\]</div>
+<p>La descente de Fermat-Euler transforme ensuite cette représentation d'un multiple de <span class="arithmatex">\(p\)</span> en une représentation de <span class="arithmatex">\(p\)</span> lui-même.</p>
+<p>Dans le langage de <span class="arithmatex">\(\mathbf Z[i]\)</span>, la même idée dit que <span class="arithmatex">\(p\)</span> divise</p>
+<div class="arithmatex">\[
+(u+i)(u-i).
+\]</div>
+<p>Mais <span class="arithmatex">\(p\)</span> ne divise ni <span class="arithmatex">\(u+i\)</span> ni <span class="arithmatex">\(u-i\)</span> dans <span class="arithmatex">\(\mathbf Z[i]\)</span>. Donc <span class="arithmatex">\(p\)</span> n'est pas premier dans <span class="arithmatex">\(\mathbf Z[i]\)</span> ; il se décompose, et cette décomposition donne <span class="arithmatex">\(p=a^2+b^2\)</span>.</p>
+<h3 id="44-pourquoi-la-factorisation-dans-mathbf-zi-rend-elle-le-resultat-naturel">4.4. Pourquoi la factorisation dans <span class="arithmatex">\(\mathbf Z[i]\)</span> rend-elle le résultat naturel ?<a class="headerlink" href="#44-pourquoi-la-factorisation-dans-mathbf-zi-rend-elle-le-resultat-naturel" title="Permanent link">&para;</a></h3>
+<p>Parce que la formule</p>
+<div class="arithmatex">\[
+x^2+y^2=(x+iy)(x-iy)
+\]</div>
+<p>transforme une somme de carrés en une norme multiplicative.</p>
+<p>La propriété centrale devient :</p>
+<div class="arithmatex">\[
+N(\alpha\beta)=N(\alpha)N(\beta).
+\]</div>
+<p>Donc les représentations par <span class="arithmatex">\(x^2+y^2\)</span> sont contrôlées par la multiplication dans <span class="arithmatex">\(\mathbf Z[i]\)</span>.</p>
+<p>Le théorème des deux carrés dit alors comment les nombres premiers ordinaires se comportent dans <span class="arithmatex">\(\mathbf Z[i]\)</span> :</p>
+<ul>
+<li><span class="arithmatex">\(2\)</span> est ramifié ;</li>
+<li>les premiers <span class="arithmatex">\(p\equiv 1\pmod 4\)</span> se décomposent ;</li>
+<li>les premiers <span class="arithmatex">\(q\equiv 3\pmod 4\)</span> restent premiers.</li>
+</ul>
+<h3 id="45-pourquoi-ce-resultat-annonce-t-il-la-theorie-algebrique-des-nombres">4.5. Pourquoi ce résultat annonce-t-il la théorie algébrique des nombres ?<a class="headerlink" href="#45-pourquoi-ce-resultat-annonce-t-il-la-theorie-algebrique-des-nombres" title="Permanent link">&para;</a></h3>
+<p>Parce qu'il contient déjà le schéma suivant :</p>
+<ol>
+<li>on part d'une équation diophantienne dans <span class="arithmatex">\(\mathbf Z\)</span> ;</li>
+<li>on introduit un anneau plus grand ;</li>
+<li>on y interprète l'équation comme une factorisation ou une norme ;</li>
+<li>on utilise la structure arithmétique de cet anneau ;</li>
+<li>on revient à une conclusion sur les entiers ordinaires.</li>
+</ol>
+<p>Ce schéma est exactement celui qui se développera avec :</p>
+<ul>
+<li><span class="arithmatex">\(\mathbf Z[i]\)</span> pour les sommes de deux carrés ;</li>
+<li><span class="arithmatex">\(\mathbf Z[\zeta_p]\)</span> pour Fermat et Kummer ;</li>
+<li>les anneaux d'entiers <span class="arithmatex">\(\mathcal O_K\)</span> pour Dedekind ;</li>
+<li>les idéaux pour restaurer la factorisation unique.</li>
+</ul>
+<hr />
+<h2 id="5-demonstration-1-necessite-elementaire">5. Démonstration 1 — Nécessité élémentaire<a class="headerlink" href="#5-demonstration-1-necessite-elementaire" title="Permanent link">&para;</a></h2>
+<p><strong>Proposition.</strong> Si <span class="arithmatex">\(p\)</span> est un nombre premier impair et si</p>
+<div class="arithmatex">\[
+p=x^2+y^2
+\]</div>
+<p>avec <span class="arithmatex">\(x,y\in\mathbf Z\)</span>, alors</p>
+<div class="arithmatex">\[
+p\equiv 1\pmod 4.
+\]</div>
+<p><strong>Preuve.</strong></p>
+<p>Pour tout entier <span class="arithmatex">\(z\)</span>, on a :</p>
+<ul>
+<li>si <span class="arithmatex">\(z\)</span> est pair, alors <span class="arithmatex">\(z^2\equiv 0\pmod 4\)</span> ;</li>
+<li>si <span class="arithmatex">\(z\)</span> est impair, alors <span class="arithmatex">\(z^2\equiv 1\pmod 4\)</span>.</li>
+</ul>
+<p>Donc un carré est congru à <span class="arithmatex">\(0\)</span> ou à <span class="arithmatex">\(1\)</span> modulo <span class="arithmatex">\(4\)</span>.</p>
+<p>Ainsi <span class="arithmatex">\(x^2+y^2\)</span> est congru modulo <span class="arithmatex">\(4\)</span> à l'une des valeurs suivantes :</p>
+<div class="arithmatex">\[
+0+0,\quad 0+1,\quad 1+0,\quad 1+1.
+\]</div>
+<p>Donc</p>
+<div class="arithmatex">\[
+x^2+y^2\equiv 0,1,2\pmod 4.
+\]</div>
+<p>Comme <span class="arithmatex">\(p\)</span> est un nombre premier impair, on a nécessairement</p>
+<div class="arithmatex">\[
+p\equiv 1\pmod 4
+\]</div>
+<p>ou</p>
+<div class="arithmatex">\[
+p\equiv 3\pmod 4.
+\]</div>
+<p>Mais <span class="arithmatex">\(p=x^2+y^2\)</span> ne peut pas être congru à <span class="arithmatex">\(3\)</span> modulo <span class="arithmatex">\(4\)</span>. Donc</p>
+<div class="arithmatex">\[
+p\equiv 1\pmod 4.
+\]</div>
+<p>Cela prouve la nécessité.</p>
+<hr />
+<h2 id="6-demonstration-2-identite-des-deux-carres-et-multiplicativite">6. Démonstration 2 — Identité des deux carrés et multiplicativité<a class="headerlink" href="#6-demonstration-2-identite-des-deux-carres-et-multiplicativite" title="Permanent link">&para;</a></h2>
+<p><strong>Proposition.</strong> Pour tous entiers <span class="arithmatex">\(a,b,c,d\)</span>, on a</p>
+<div class="arithmatex">\[
+(a^2+b^2)(c^2+d^2)
+=
+(ac-bd)^2+(ad+bc)^2.
+\]</div>
+<p><strong>Preuve.</strong></p>
+<p>On développe le membre de droite :</p>
+<div class="arithmatex">\[
+(ac-bd)^2+(ad+bc)^2
+\]</div>
+<div class="arithmatex">\[
+=
+a^2c^2-2abcd+b^2d^2+a^2d^2+2abcd+b^2c^2.
+\]</div>
+<p>Les termes <span class="arithmatex">\(-2abcd\)</span> et <span class="arithmatex">\(2abcd\)</span> s'annulent. Il reste</p>
+<div class="arithmatex">\[
+a^2c^2+b^2d^2+a^2d^2+b^2c^2.
+\]</div>
+<p>On regroupe :</p>
+<div class="arithmatex">\[
+a^2(c^2+d^2)+b^2(c^2+d^2).
+\]</div>
+<p>Donc</p>
+<div class="arithmatex">\[
+(ac-bd)^2+(ad+bc)^2
+=
+(a^2+b^2)(c^2+d^2).
+\]</div>
+<p>Cela prouve l'identité.</p>
+<p><strong>Conséquence.</strong> Si <span class="arithmatex">\(m\)</span> et <span class="arithmatex">\(n\)</span> sont deux sommes de deux carrés, alors <span class="arithmatex">\(mn\)</span> est encore une somme de deux carrés.</p>
+<p>En effet, si</p>
+<div class="arithmatex">\[
+m=a^2+b^2
+\]</div>
+<p>et</p>
+<div class="arithmatex">\[
+n=c^2+d^2,
+\]</div>
+<p>alors</p>
+<div class="arithmatex">\[
+mn=(ac-bd)^2+(ad+bc)^2.
+\]</div>
+<p>Cette identité explique pourquoi la version générale du théorème peut être déduite du cas des nombres premiers.</p>
+<p>Si :</p>
+<ul>
+<li><span class="arithmatex">\(2\)</span> est somme de deux carrés ;</li>
+<li>tout premier <span class="arithmatex">\(p\equiv 1\pmod 4\)</span> est somme de deux carrés ;</li>
+<li>tout produit de sommes de deux carrés est somme de deux carrés ;</li>
+</ul>
+<p>alors tout entier dont les facteurs premiers <span class="arithmatex">\(q\equiv 3\pmod 4\)</span> apparaissent avec exposant pair est somme de deux carrés. En effet, chaque facteur <span class="arithmatex">\(q^{2r}\)</span> est lui-même un carré :</p>
+<div class="arithmatex">\[
+q^{2r}=(q^r)^2+0^2.
+\]</div>
+<p>Donc ces facteurs ne posent pas d'obstruction.</p>
+<hr />
+<h2 id="7-demonstration-3-lemme-des-premiers-3pmod-4">7. Démonstration 3 — Lemme des premiers <span class="arithmatex">\(3\pmod 4\)</span><a class="headerlink" href="#7-demonstration-3-lemme-des-premiers-3pmod-4" title="Permanent link">&para;</a></h2>
+<h3 id="71-critere-utilise">7.1. Critère utilisé<a class="headerlink" href="#71-critere-utilise" title="Permanent link">&para;</a></h3>
+<p>Nous utiliserons le critère d'Euler.</p>
+<p><strong>Critère d'Euler.</strong> Soit <span class="arithmatex">\(p\)</span> un nombre premier impair et soit <span class="arithmatex">\(a\)</span> un entier non divisible par <span class="arithmatex">\(p\)</span>. Alors :</p>
+<div class="arithmatex">\[
+a^{(p-1)/2}\equiv 1\pmod p
+\]</div>
+<p>si <span class="arithmatex">\(a\)</span> est un carré modulo <span class="arithmatex">\(p\)</span>, et</p>
+<div class="arithmatex">\[
+a^{(p-1)/2}\equiv -1\pmod p
+\]</div>
+<p>si <span class="arithmatex">\(a\)</span> n'est pas un carré modulo <span class="arithmatex">\(p\)</span>.</p>
+<p>En particulier, pour <span class="arithmatex">\(a=-1\)</span>, on obtient</p>
+<div class="arithmatex">\[
+(-1)^{(p-1)/2}\equiv 1\pmod p
+\]</div>
+<p>si et seulement si <span class="arithmatex">\(-1\)</span> est un carré modulo <span class="arithmatex">\(p\)</span>.</p>
+<p>Donc <span class="arithmatex">\(-1\)</span> est un carré modulo <span class="arithmatex">\(p\)</span> si et seulement si <span class="arithmatex">\(p\equiv 1\pmod 4\)</span>.</p>
+<h3 id="72-lemme-fondamental">7.2. Lemme fondamental<a class="headerlink" href="#72-lemme-fondamental" title="Permanent link">&para;</a></h3>
+<p><strong>Lemme.</strong> Soit <span class="arithmatex">\(q\)</span> un nombre premier tel que <span class="arithmatex">\(q\equiv 3\pmod 4\)</span>. Si</p>
+<div class="arithmatex">\[
+q\mid x^2+y^2,
+\]</div>
+<p>alors</p>
+<div class="arithmatex">\[
+q\mid x
+\]</div>
+<p>et</p>
+<div class="arithmatex">\[
+q\mid y.
+\]</div>
+<p><strong>Preuve.</strong></p>
+<p>Supposons que</p>
+<div class="arithmatex">\[
+q\mid x^2+y^2.
+\]</div>
+<p>On a donc</p>
+<div class="arithmatex">\[
+x^2+y^2\equiv 0\pmod q.
+\]</div>
+<p>Si <span class="arithmatex">\(q\)</span> ne divise pas <span class="arithmatex">\(y\)</span>, alors <span class="arithmatex">\(y\)</span> est inversible modulo <span class="arithmatex">\(q\)</span>. On peut multiplier par l'inverse de <span class="arithmatex">\(y^2\)</span> modulo <span class="arithmatex">\(q\)</span>. On obtient</p>
+<div class="arithmatex">\[
+(xy^{-1})^2+1\equiv 0\pmod q.
+\]</div>
+<p>Donc</p>
+<div class="arithmatex">\[
+(xy^{-1})^2\equiv -1\pmod q.
+\]</div>
+<p>Ainsi <span class="arithmatex">\(-1\)</span> serait un carré modulo <span class="arithmatex">\(q\)</span>.</p>
+<p>Mais <span class="arithmatex">\(q\equiv 3\pmod 4\)</span>, donc, d'après le critère d'Euler, <span class="arithmatex">\(-1\)</span> n'est pas un carré modulo <span class="arithmatex">\(q\)</span>.</p>
+<p>Contradiction.</p>
+<p>Donc <span class="arithmatex">\(q\)</span> divise <span class="arithmatex">\(y\)</span>.</p>
+<p>Alors, comme <span class="arithmatex">\(q\)</span> divise <span class="arithmatex">\(x^2+y^2\)</span> et <span class="arithmatex">\(q\)</span> divise <span class="arithmatex">\(y\)</span>, on a aussi</p>
+<div class="arithmatex">\[
+q\mid x^2.
+\]</div>
+<p>Comme <span class="arithmatex">\(q\)</span> est premier, cela implique</p>
+<div class="arithmatex">\[
+q\mid x.
+\]</div>
+<p>Donc <span class="arithmatex">\(q\)</span> divise <span class="arithmatex">\(x\)</span> et <span class="arithmatex">\(y\)</span>.</p>
+<p>Le cas où <span class="arithmatex">\(q\)</span> ne divise pas <span class="arithmatex">\(x\)</span> se traite de la même manière. La conclusion est donc établie.</p>
+<h3 id="73-consequence-sur-les-exposants">7.3. Conséquence sur les exposants<a class="headerlink" href="#73-consequence-sur-les-exposants" title="Permanent link">&para;</a></h3>
+<p>Soit <span class="arithmatex">\(n=x^2+y^2\)</span>, et soit <span class="arithmatex">\(q\equiv 3\pmod 4\)</span> un nombre premier divisant <span class="arithmatex">\(n\)</span>.</p>
+<p>Par le lemme, <span class="arithmatex">\(q\)</span> divise <span class="arithmatex">\(x\)</span> et <span class="arithmatex">\(y\)</span>. Donc il existe <span class="arithmatex">\(x_1,y_1\in\mathbf Z\)</span> tels que</p>
+<div class="arithmatex">\[
+x=qx_1
+\]</div>
+<p>et</p>
+<div class="arithmatex">\[
+y=qy_1.
+\]</div>
+<p>Alors</p>
+<div class="arithmatex">\[
+n=x^2+y^2=q^2(x_1^2+y_1^2).
+\]</div>
+<p>Donc si <span class="arithmatex">\(q\)</span> divise une somme de deux carrés, il la divise en réalité au moins au carré, sauf si l'on continue à extraire <span class="arithmatex">\(q\)</span> de <span class="arithmatex">\(x_1\)</span> et <span class="arithmatex">\(y_1\)</span>.</p>
+<p>En répétant l'argument, on voit que l'exposant de <span class="arithmatex">\(q\)</span> dans <span class="arithmatex">\(n\)</span> est nécessairement pair.</p>
+<p>Ainsi, tout premier <span class="arithmatex">\(q\equiv 3\pmod 4\)</span> apparaît avec exposant pair dans un entier somme de deux carrés.</p>
+<hr />
+<h2 id="8-demonstration-4-existence-pour-pequiv-1pmod-4-par-descente">8. Démonstration 4 — Existence pour <span class="arithmatex">\(p\equiv 1\pmod 4\)</span> par descente<a class="headerlink" href="#8-demonstration-4-existence-pour-pequiv-1pmod-4-par-descente" title="Permanent link">&para;</a></h2>
+<p>Nous démontrons maintenant la partie difficile sous une forme proche de l'esprit Fermat-Euler.</p>
+<p><strong>Théorème.</strong> Soit <span class="arithmatex">\(p\)</span> un nombre premier tel que</p>
+<div class="arithmatex">\[
+p\equiv 1\pmod 4.
+\]</div>
+<p>Alors il existe <span class="arithmatex">\(x,y\in\mathbf Z\)</span> tels que</p>
+<div class="arithmatex">\[
+p=x^2+y^2.
+\]</div>
+<h3 id="81-premiere-etape-obtenir-un-multiple-de-p-somme-de-deux-carres">8.1. Première étape : obtenir un multiple de <span class="arithmatex">\(p\)</span> somme de deux carrés<a class="headerlink" href="#81-premiere-etape-obtenir-un-multiple-de-p-somme-de-deux-carres" title="Permanent link">&para;</a></h3>
+<p>Comme <span class="arithmatex">\(p\equiv 1\pmod 4\)</span>, le critère d'Euler implique que <span class="arithmatex">\(-1\)</span> est un carré modulo <span class="arithmatex">\(p\)</span>.</p>
+<p>Donc il existe un entier <span class="arithmatex">\(u\)</span> tel que</p>
+<div class="arithmatex">\[
+u^2\equiv -1\pmod p.
+\]</div>
+<p>Autrement dit,</p>
+<div class="arithmatex">\[
+p\mid u^2+1.
+\]</div>
+<p>Donc il existe un entier <span class="arithmatex">\(m&gt;0\)</span> tel que</p>
+<div class="arithmatex">\[
+u^2+1=mp.
+\]</div>
+<p>Ainsi un multiple de <span class="arithmatex">\(p\)</span> est somme de deux carrés :</p>
+<div class="arithmatex">\[
+mp=u^2+1^2.
+\]</div>
+<p>En remplaçant <span class="arithmatex">\(u\)</span> par le représentant congru à <span class="arithmatex">\(u\)</span> compris entre <span class="arithmatex">\(-p/2\)</span> et <span class="arithmatex">\(p/2\)</span>, on peut supposer</p>
+<div class="arithmatex">\[
+u^2\leq p^2/4.
+\]</div>
+<p>Donc</p>
+<div class="arithmatex">\[
+mp=u^2+1\leq p^2/4+1.
+\]</div>
+<p>Pour <span class="arithmatex">\(p\geq 5\)</span>, cela donne</p>
+<div class="arithmatex">\[
+m&lt;p.
+\]</div>
+<p>Le cas <span class="arithmatex">\(p=2\)</span> est déjà traité. Comme <span class="arithmatex">\(p\equiv 1\pmod 4\)</span> et <span class="arithmatex">\(p\)</span> est impair, on a <span class="arithmatex">\(p\geq 5\)</span>.</p>
+<p>Nous avons donc trouvé un entier <span class="arithmatex">\(m\)</span> tel que</p>
+<div class="arithmatex">\[
+0&lt;m&lt;p
+\]</div>
+<p>et</p>
+<div class="arithmatex">\[
+mp=x^2+y^2
+\]</div>
+<p>pour certains entiers <span class="arithmatex">\(x,y\)</span>.</p>
+<h3 id="82-choix-minimal">8.2. Choix minimal<a class="headerlink" href="#82-choix-minimal" title="Permanent link">&para;</a></h3>
+<p>Choisissons un entier <span class="arithmatex">\(m&gt;0\)</span> minimal tel que :</p>
+<ol>
+<li><span class="arithmatex">\(m&lt;p\)</span> ;</li>
+<li>il existe <span class="arithmatex">\(x,y\in\mathbf Z\)</span> avec</li>
+</ol>
+<div class="arithmatex">\[
+mp=x^2+y^2.
+\]</div>
+<p>Nous allons montrer que ce minimum vaut <span class="arithmatex">\(1\)</span>.</p>
+<p>Si <span class="arithmatex">\(m=1\)</span>, alors</p>
+<div class="arithmatex">\[
+p=x^2+y^2,
+\]</div>
+<p>et le théorème est démontré.</p>
+<p>Supposons donc, pour obtenir une contradiction, que</p>
+<div class="arithmatex">\[
+m&gt;1.
+\]</div>
+<h3 id="83-reduction-des-coordonnees-modulo-m">8.3. Réduction des coordonnées modulo <span class="arithmatex">\(m\)</span><a class="headerlink" href="#83-reduction-des-coordonnees-modulo-m" title="Permanent link">&para;</a></h3>
+<p>On a</p>
+<div class="arithmatex">\[
+mp=x^2+y^2.
+\]</div>
+<p>Réduisons <span class="arithmatex">\(x\)</span> et <span class="arithmatex">\(y\)</span> modulo <span class="arithmatex">\(m\)</span>.</p>
+<p>Choisissons des entiers <span class="arithmatex">\(r,s\)</span> tels que :</p>
+<div class="arithmatex">\[
+r\equiv x\pmod m,
+\]</div>
+<div class="arithmatex">\[
+s\equiv y\pmod m,
+\]</div>
+<p>et</p>
+<div class="arithmatex">\[
+|r|\leq m/2,
+\]</div>
+<div class="arithmatex">\[
+|s|\leq m/2.
+\]</div>
+<p>Alors</p>
+<div class="arithmatex">\[
+r^2+s^2\equiv x^2+y^2\pmod m.
+\]</div>
+<p>Or</p>
+<div class="arithmatex">\[
+x^2+y^2=mp,
+\]</div>
+<p>donc</p>
+<div class="arithmatex">\[
+x^2+y^2\equiv 0\pmod m.
+\]</div>
+<p>Ainsi</p>
+<div class="arithmatex">\[
+r^2+s^2\equiv 0\pmod m.
+\]</div>
+<p>Il existe donc un entier <span class="arithmatex">\(n\geq 0\)</span> tel que</p>
+<div class="arithmatex">\[
+r^2+s^2=mn.
+\]</div>
+<p>Mais, par le choix de <span class="arithmatex">\(r\)</span> et <span class="arithmatex">\(s\)</span>,</p>
+<div class="arithmatex">\[
+r^2+s^2\leq m^2/4+m^2/4=m^2/2.
+\]</div>
+<p>Donc</p>
+<div class="arithmatex">\[
+mn\leq m^2/2.
+\]</div>
+<p>Comme <span class="arithmatex">\(m&gt;0\)</span>, on obtient</p>
+<div class="arithmatex">\[
+n\leq m/2.
+\]</div>
+<p>En particulier,</p>
+<div class="arithmatex">\[
+n&lt;m.
+\]</div>
+<p>Nous devons exclure le cas <span class="arithmatex">\(n=0\)</span>.</p>
+<p>Si <span class="arithmatex">\(n=0\)</span>, alors</p>
+<div class="arithmatex">\[
+r^2+s^2=0,
+\]</div>
+<p>donc <span class="arithmatex">\(r=s=0\)</span>. Cela signifie que <span class="arithmatex">\(m\)</span> divise <span class="arithmatex">\(x\)</span> et <span class="arithmatex">\(y\)</span>.</p>
+<p>Alors <span class="arithmatex">\(m^2\)</span> divise <span class="arithmatex">\(x^2+y^2=mp\)</span>, donc <span class="arithmatex">\(m\)</span> divise <span class="arithmatex">\(p\)</span>. Comme <span class="arithmatex">\(p\)</span> est premier et <span class="arithmatex">\(0&lt;m&lt;p\)</span>, c'est impossible si <span class="arithmatex">\(m&gt;1\)</span>.</p>
+<p>Donc</p>
+<div class="arithmatex">\[
+0&lt;n&lt;m.
+\]</div>
+<h3 id="84-construction-dune-representation-plus-petite">8.4. Construction d'une représentation plus petite<a class="headerlink" href="#84-construction-dune-representation-plus-petite" title="Permanent link">&para;</a></h3>
+<p>Utilisons l'identité des deux carrés :</p>
+<div class="arithmatex">\[
+(x^2+y^2)(r^2+s^2)
+=
+(xr+ys)^2+(xs-yr)^2.
+\]</div>
+<p>Le signe choisi ici est équivalent à l'identité usuelle.</p>
+<p>Comme</p>
+<div class="arithmatex">\[
+x^2+y^2=mp
+\]</div>
+<p>et</p>
+<div class="arithmatex">\[
+r^2+s^2=mn,
+\]</div>
+<p>on obtient</p>
+<div class="arithmatex">\[
+m^2pn=(xr+ys)^2+(xs-yr)^2.
+\]</div>
+<p>Nous allons montrer que les deux entiers <span class="arithmatex">\(xr+ys\)</span> et <span class="arithmatex">\(xs-yr\)</span> sont divisibles par <span class="arithmatex">\(m\)</span>.</p>
+<p>Comme <span class="arithmatex">\(r\equiv x\pmod m\)</span> et <span class="arithmatex">\(s\equiv y\pmod m\)</span>, on a</p>
+<div class="arithmatex">\[
+xr+ys\equiv x^2+y^2\pmod m.
+\]</div>
+<p>Or <span class="arithmatex">\(x^2+y^2=mp\)</span>, donc</p>
+<div class="arithmatex">\[
+xr+ys\equiv 0\pmod m.
+\]</div>
+<p>De même,</p>
+<div class="arithmatex">\[
+xs-yr\equiv xy-yx\pmod m.
+\]</div>
+<p>Donc</p>
+<div class="arithmatex">\[
+xs-yr\equiv 0\pmod m.
+\]</div>
+<p>Il existe donc <span class="arithmatex">\(A,B\in\mathbf Z\)</span> tels que</p>
+<div class="arithmatex">\[
+xr+ys=mA
+\]</div>
+<p>et</p>
+<div class="arithmatex">\[
+xs-yr=mB.
+\]</div>
+<p>En remplaçant dans l'identité, on obtient</p>
+<div class="arithmatex">\[
+m^2pn=m^2A^2+m^2B^2.
+\]</div>
+<p>On divise par <span class="arithmatex">\(m^2\)</span> :</p>
+<div class="arithmatex">\[
+pn=A^2+B^2.
+\]</div>
+<p>Donc <span class="arithmatex">\(pn\)</span> est une somme de deux carrés.</p>
+<p>Mais nous avons montré que</p>
+<div class="arithmatex">\[
+0&lt;n&lt;m.
+\]</div>
+<p>Cela contredit la minimalité de <span class="arithmatex">\(m\)</span>.</p>
+<p>Donc l'hypothèse <span class="arithmatex">\(m&gt;1\)</span> est impossible.</p>
+<p>Par conséquent,</p>
+<div class="arithmatex">\[
+m=1.
+\]</div>
+<p>Ainsi</p>
+<div class="arithmatex">\[
+p=x^2+y^2.
+\]</div>
+<p>La preuve par descente est terminée.</p>
+<hr />
+<h2 id="9-demonstration-5-preuve-moderne-par-les-entiers-de-gauss">9. Démonstration 5 — Preuve moderne par les entiers de Gauss<a class="headerlink" href="#9-demonstration-5-preuve-moderne-par-les-entiers-de-gauss" title="Permanent link">&para;</a></h2>
+<h3 id="91-definition">9.1. Définition<a class="headerlink" href="#91-definition" title="Permanent link">&para;</a></h3>
+<p>On définit l'anneau des entiers de Gauss par</p>
+<div class="arithmatex">\[
+\mathbf Z[i]=\{a+bi:a,b\in\mathbf Z\}.
+\]</div>
+<p>L'addition et la multiplication sont celles des nombres complexes.</p>
+<p>On définit la conjugaison par</p>
+<div class="arithmatex">\[
+\overline{a+bi}=a-bi.
+\]</div>
+<p>On définit la norme par</p>
+<div class="arithmatex">\[
+N(a+bi)=(a+bi)(a-bi)=a^2+b^2.
+\]</div>
+<h3 id="92-proprietes-de-la-norme">9.2. Propriétés de la norme<a class="headerlink" href="#92-proprietes-de-la-norme" title="Permanent link">&para;</a></h3>
+<p><strong>Proposition.</strong> Pour tous <span class="arithmatex">\(\alpha,\beta\in\mathbf Z[i]\)</span>, on a</p>
+<div class="arithmatex">\[
+N(\alpha\beta)=N(\alpha)N(\beta).
+\]</div>
+<p><strong>Preuve.</strong></p>
+<p>On utilise la conjugaison complexe. On a</p>
+<div class="arithmatex">\[
+N(\alpha\beta)=\alpha\beta\overline{\alpha\beta}.
+\]</div>
+<p>Comme la conjugaison est multiplicative,</p>
+<div class="arithmatex">\[
+\overline{\alpha\beta}=\overline{\alpha}\overline{\beta}.
+\]</div>
+<p>Donc</p>
+<div class="arithmatex">\[
+N(\alpha\beta)=\alpha\beta\overline{\alpha}\overline{\beta}.
+\]</div>
+<p>La multiplication complexe est commutative, donc</p>
+<div class="arithmatex">\[
+N(\alpha\beta)=\alpha\overline{\alpha}\beta\overline{\beta}.
+\]</div>
+<p>Ainsi</p>
+<div class="arithmatex">\[
+N(\alpha\beta)=N(\alpha)N(\beta).
+\]</div>
+<h3 id="93-euclidianite-de-mathbf-zi">9.3. Euclidianité de <span class="arithmatex">\(\mathbf Z[i]\)</span><a class="headerlink" href="#93-euclidianite-de-mathbf-zi" title="Permanent link">&para;</a></h3>
+<p><strong>Théorème.</strong> L'anneau <span class="arithmatex">\(\mathbf Z[i]\)</span> est euclidien pour la norme <span class="arithmatex">\(N\)</span>.</p>
+<p>Cela signifie que pour tous <span class="arithmatex">\(\alpha,\beta\in\mathbf Z[i]\)</span> avec <span class="arithmatex">\(\beta\neq 0\)</span>, il existe <span class="arithmatex">\(q,r\in\mathbf Z[i]\)</span> tels que</p>
+<div class="arithmatex">\[
+\alpha=q\beta+r
+\]</div>
+<p>et</p>
+<div class="arithmatex">\[
+N(r)&lt;N(\beta).
+\]</div>
+<p><strong>Preuve.</strong></p>
+<p>Considérons le quotient complexe</p>
+<div class="arithmatex">\[
+z=\alpha/\beta.
+\]</div>
+<p>Écrivons</p>
+<div class="arithmatex">\[
+z=x+iy
+\]</div>
+<p>avec <span class="arithmatex">\(x,y\in\mathbf R\)</span>.</p>
+<p>Choisissons des entiers <span class="arithmatex">\(m,n\in\mathbf Z\)</span> tels que</p>
+<div class="arithmatex">\[
+|x-m|\leq 1/2
+\]</div>
+<p>et</p>
+<div class="arithmatex">\[
+|y-n|\leq 1/2.
+\]</div>
+<p>Posons</p>
+<div class="arithmatex">\[
+q=m+ni.
+\]</div>
+<p>Alors</p>
+<div class="arithmatex">\[
+z-q=(x-m)+i(y-n).
+\]</div>
+<p>Donc</p>
+<div class="arithmatex">\[
+|z-q|^2=(x-m)^2+(y-n)^2\leq 1/4+1/4=1/2.
+\]</div>
+<p>Posons</p>
+<div class="arithmatex">\[
+r=\alpha-q\beta.
+\]</div>
+<p>Alors</p>
+<div class="arithmatex">\[
+r=\beta(z-q).
+\]</div>
+<p>En prenant les normes,</p>
+<div class="arithmatex">\[
+N(r)=N(\beta)N(z-q).
+\]</div>
+<p>Ici <span class="arithmatex">\(N(z-q)\)</span> désigne le carré du module complexe de <span class="arithmatex">\(z-q\)</span>. On a</p>
+<div class="arithmatex">\[
+N(z-q)\leq 1/2.
+\]</div>
+<p>Donc</p>
+<div class="arithmatex">\[
+N(r)\leq N(\beta)/2&lt;N(\beta).
+\]</div>
+<p>Cela prouve la division euclidienne dans <span class="arithmatex">\(\mathbf Z[i]\)</span>.</p>
+<p>Ainsi <span class="arithmatex">\(\mathbf Z[i]\)</span> est euclidien.</p>
+<p><strong>Conséquence.</strong> L'anneau <span class="arithmatex">\(\mathbf Z[i]\)</span> est principal, donc factoriel. En particulier, tout élément irréductible y est premier.</p>
+<h3 id="94-factorisation-de-p">9.4. Factorisation de <span class="arithmatex">\(p\)</span><a class="headerlink" href="#94-factorisation-de-p" title="Permanent link">&para;</a></h3>
+<p>Soit <span class="arithmatex">\(p\)</span> un nombre premier impair tel que</p>
+<div class="arithmatex">\[
+p\equiv 1\pmod 4.
+\]</div>
+<p>Alors <span class="arithmatex">\(-1\)</span> est un carré modulo <span class="arithmatex">\(p\)</span>. Il existe donc <span class="arithmatex">\(u\in\mathbf Z\)</span> tel que</p>
+<div class="arithmatex">\[
+u^2\equiv -1\pmod p.
+\]</div>
+<p>Donc</p>
+<div class="arithmatex">\[
+p\mid u^2+1.
+\]</div>
+<p>Dans <span class="arithmatex">\(\mathbf Z[i]\)</span>, cela s'écrit</p>
+<div class="arithmatex">\[
+p\mid (u+i)(u-i).
+\]</div>
+<p>Mais <span class="arithmatex">\(p\)</span> ne divise pas <span class="arithmatex">\(u+i\)</span> dans <span class="arithmatex">\(\mathbf Z[i]\)</span>, car cela exigerait que <span class="arithmatex">\(p\)</span> divise à la fois <span class="arithmatex">\(u\)</span> et <span class="arithmatex">\(1\)</span>.</p>
+<p>De même, <span class="arithmatex">\(p\)</span> ne divise pas <span class="arithmatex">\(u-i\)</span>.</p>
+<p>Si <span class="arithmatex">\(p\)</span> était premier dans <span class="arithmatex">\(\mathbf Z[i]\)</span>, alors de</p>
+<div class="arithmatex">\[
+p\mid (u+i)(u-i)
+\]</div>
+<p>on pourrait déduire que <span class="arithmatex">\(p\)</span> divise <span class="arithmatex">\(u+i\)</span> ou <span class="arithmatex">\(u-i\)</span>.</p>
+<p>Ce n'est pas le cas. Donc <span class="arithmatex">\(p\)</span> n'est pas premier dans <span class="arithmatex">\(\mathbf Z[i]\)</span>.</p>
+<p>Comme <span class="arithmatex">\(\mathbf Z[i]\)</span> est factoriel, cela implique que <span class="arithmatex">\(p\)</span> n'est pas irréductible. Il existe donc des éléments non inversibles <span class="arithmatex">\(\alpha,\beta\in\mathbf Z[i]\)</span> tels que</p>
+<div class="arithmatex">\[
+p=\alpha\beta.
+\]</div>
+<p>En prenant les normes :</p>
+<div class="arithmatex">\[
+p^2=N(p)=N(\alpha)N(\beta).
+\]</div>
+<p>Comme <span class="arithmatex">\(\alpha\)</span> et <span class="arithmatex">\(\beta\)</span> ne sont pas inversibles, on a</p>
+<div class="arithmatex">\[
+N(\alpha)&gt;1
+\]</div>
+<p>et</p>
+<div class="arithmatex">\[
+N(\beta)&gt;1.
+\]</div>
+<p>Les normes sont des entiers positifs. Donc la seule possibilité est</p>
+<div class="arithmatex">\[
+N(\alpha)=p
+\]</div>
+<p>et</p>
+<div class="arithmatex">\[
+N(\beta)=p.
+\]</div>
+<p>Écrivons</p>
+<div class="arithmatex">\[
+\alpha=a+bi.
+\]</div>
+<p>Alors</p>
+<div class="arithmatex">\[
+N(\alpha)=a^2+b^2=p.
+\]</div>
+<p>Donc</p>
+<div class="arithmatex">\[
+p=a^2+b^2.
+\]</div>
+<p>Cela démontre le théorème pour les nombres premiers <span class="arithmatex">\(p\equiv 1\pmod 4\)</span>.</p>
+<h3 id="95-comportement-des-premiers-dans-mathbf-zi">9.5. Comportement des premiers dans <span class="arithmatex">\(\mathbf Z[i]\)</span><a class="headerlink" href="#95-comportement-des-premiers-dans-mathbf-zi" title="Permanent link">&para;</a></h3>
+<p>La preuve suggère une classification plus forte :</p>
+<ul>
+<li><span class="arithmatex">\(2\)</span> est ramifié, car</li>
+</ul>
+<div class="arithmatex">\[
+2=(1+i)(1-i).
+\]</div>
+<ul>
+<li>Si <span class="arithmatex">\(p\equiv 1\pmod 4\)</span>, alors <span class="arithmatex">\(p\)</span> se décompose dans <span class="arithmatex">\(\mathbf Z[i]\)</span> :</li>
+</ul>
+<div class="arithmatex">\[
+p=(a+bi)(a-bi).
+\]</div>
+<ul>
+<li>Si <span class="arithmatex">\(q\equiv 3\pmod 4\)</span>, alors <span class="arithmatex">\(q\)</span> reste premier dans <span class="arithmatex">\(\mathbf Z[i]\)</span>.</li>
+</ul>
+<p>Cette classification est la version algébrique du théorème des deux carrés.</p>
+<hr />
+<h2 id="10-demonstration-6-lecture-par-les-formes-quadratiques">10. Démonstration 6 — Lecture par les formes quadratiques<a class="headerlink" href="#10-demonstration-6-lecture-par-les-formes-quadratiques" title="Permanent link">&para;</a></h2>
+<p>La forme</p>
+<div class="arithmatex">\[
+x^2+y^2
+\]</div>
+<p>est une forme quadratique binaire entière.</p>
+<p>Sous la forme générale</p>
+<div class="arithmatex">\[
+ax^2+bxy+cy^2,
+\]</div>
+<p>elle correspond à</p>
+<div class="arithmatex">\[
+a=1,\quad b=0,\quad c=1.
+\]</div>
+<p>Son discriminant est</p>
+<div class="arithmatex">\[
+D=b^2-4ac=-4.
+\]</div>
+<p>La question du théorème des deux carrés est donc :</p>
+<blockquote>
+<p>Quels nombres premiers sont représentés par la forme quadratique de discriminant <span class="arithmatex">\(-4\)</span> ?</p>
+</blockquote>
+<p>La réponse est :</p>
+<ul>
+<li><span class="arithmatex">\(2\)</span> ;</li>
+<li>les premiers <span class="arithmatex">\(p\equiv 1\pmod 4\)</span>.</li>
+</ul>
+<p>Les premiers <span class="arithmatex">\(q\equiv 3\pmod 4\)</span> ne sont pas représentés.</p>
+<p>Ce résultat est un modèle pour des questions plus générales :</p>
+<ul>
+<li>quels premiers sont de la forme <span class="arithmatex">\(x^2+2y^2\)</span> ?</li>
+<li>quels premiers sont de la forme <span class="arithmatex">\(x^2+3y^2\)</span> ?</li>
+<li>quels premiers sont de la forme <span class="arithmatex">\(x^2+ny^2\)</span> ?</li>
+<li>quels entiers sont représentés par <span class="arithmatex">\(ax^2+bxy+cy^2\)</span> ?</li>
+</ul>
+<p>Gauss comprend que ces questions ne doivent pas être traitées une par une. Il faut classifier les formes quadratiques de discriminant donné.</p>
+<p>Deux formes peuvent représenter les mêmes entiers pour des raisons de changement de variables. Il faut donc étudier les formes à équivalence près.</p>
+<p>La composition de Gauss montre ensuite que les classes de formes de même discriminant possèdent une structure de groupe. C'est l'ancêtre des groupes de classes.</p>
+<p>Dans le cas <span class="arithmatex">\(D=-4\)</span>, la théorie est très simple : l'anneau correspondant est <span class="arithmatex">\(\mathbf Z[i]\)</span>, et le groupe de classes est trivial. C'est pourquoi le théorème des deux carrés possède une formulation particulièrement nette.</p>
+<p>La réciprocité quadratique intervient parce que représenter un premier <span class="arithmatex">\(p\)</span> par une forme de discriminant <span class="arithmatex">\(D\)</span> est lié au fait que <span class="arithmatex">\(D\)</span> soit un carré modulo <span class="arithmatex">\(p\)</span>. Pour <span class="arithmatex">\(D=-4\)</span>, cela revient à demander que <span class="arithmatex">\(-1\)</span> soit un carré modulo <span class="arithmatex">\(p\)</span>, c'est-à-dire</p>
+<div class="arithmatex">\[
+p\equiv 1\pmod 4.
+\]</div>
+<p>Ainsi, le théorème des deux carrés est le premier exemple où se rencontrent :</p>
+<ul>
+<li>représentation par formes quadratiques ;</li>
+<li>congruences ;</li>
+<li>réciprocité ;</li>
+<li>factorisation dans un anneau quadratique ;</li>
+<li>théorie des classes.</li>
+</ul>
+<hr />
+<h2 id="11-version-generale-du-theoreme">11. Version générale du théorème<a class="headerlink" href="#11-version-generale-du-theoreme" title="Permanent link">&para;</a></h2>
+<p><strong>Théorème.</strong> Soit <span class="arithmatex">\(n\geq 1\)</span> un entier. Alors <span class="arithmatex">\(n\)</span> est somme de deux carrés si et seulement si tout nombre premier <span class="arithmatex">\(q\equiv 3\pmod 4\)</span> apparaît avec exposant pair dans la factorisation première de <span class="arithmatex">\(n\)</span>.</p>
+<h3 id="111-necessite">11.1. Nécessité<a class="headerlink" href="#111-necessite" title="Permanent link">&para;</a></h3>
+<p>Supposons que</p>
+<div class="arithmatex">\[
+n=x^2+y^2.
+\]</div>
+<p>Soit <span class="arithmatex">\(q\equiv 3\pmod 4\)</span> un nombre premier divisant <span class="arithmatex">\(n\)</span>.</p>
+<p>D'après le lemme des premiers <span class="arithmatex">\(3\pmod 4\)</span>, si <span class="arithmatex">\(q\)</span> divise <span class="arithmatex">\(x^2+y^2\)</span>, alors <span class="arithmatex">\(q\)</span> divise <span class="arithmatex">\(x\)</span> et <span class="arithmatex">\(y\)</span>.</p>
+<p>Donc</p>
+<div class="arithmatex">\[
+x=qx_1
+\]</div>
+<p>et</p>
+<div class="arithmatex">\[
+y=qy_1.
+\]</div>
+<p>Alors</p>
+<div class="arithmatex">\[
+n=q^2(x_1^2+y_1^2).
+\]</div>
+<p>Ainsi, chaque fois que <span class="arithmatex">\(q\)</span> divise <span class="arithmatex">\(n\)</span>, il apparaît au moins par un facteur <span class="arithmatex">\(q^2\)</span>.</p>
+<p>En répétant l'argument, on voit que l'exposant de <span class="arithmatex">\(q\)</span> dans <span class="arithmatex">\(n\)</span> est pair.</p>
+<p>Donc tout premier <span class="arithmatex">\(q\equiv 3\pmod 4\)</span> apparaît avec exposant pair.</p>
+<h3 id="112-suffisance">11.2. Suffisance<a class="headerlink" href="#112-suffisance" title="Permanent link">&para;</a></h3>
+<p>Supposons maintenant que tout premier <span class="arithmatex">\(q\equiv 3\pmod 4\)</span> apparaisse avec exposant pair dans <span class="arithmatex">\(n\)</span>.</p>
+<p>Écrivons</p>
+<div class="arithmatex">\[
+n=2^a
+\prod_{p\equiv 1\pmod 4}p^{\alpha_p}
+\prod_{q\equiv 3\pmod 4}q^{2\gamma_q}.
+\]</div>
+<p>Chaque facteur du produit est une somme de deux carrés :</p>
+<ul>
+<li><span class="arithmatex">\(2=1^2+1^2\)</span> ;</li>
+<li>si <span class="arithmatex">\(p\equiv 1\pmod 4\)</span>, alors <span class="arithmatex">\(p\)</span> est somme de deux carrés ;</li>
+<li>une puissance d'une somme de deux carrés est encore une somme de deux carrés, par multiplicativité ;</li>
+<li><span class="arithmatex">\(q^{2\gamma_q}\)</span> est un carré, donc</li>
+</ul>
+<div class="arithmatex">\[
+q^{2\gamma_q}=(q^{\gamma_q})^2+0^2.
+\]</div>
+<p>Comme le produit de deux sommes de deux carrés est encore une somme de deux carrés, l'entier <span class="arithmatex">\(n\)</span> est une somme de deux carrés.</p>
+<p>Cela démontre la version générale.</p>
+<hr />
+<h2 id="12-exemples-calcules">12. Exemples calculés<a class="headerlink" href="#12-exemples-calcules" title="Permanent link">&para;</a></h2>
+<h3 id="121-le-nombre-5">12.1. Le nombre <span class="arithmatex">\(5\)</span><a class="headerlink" href="#121-le-nombre-5" title="Permanent link">&para;</a></h3>
+<p>On a</p>
+<div class="arithmatex">\[
+5=1^2+2^2.
+\]</div>
+<p>Cela correspond à</p>
+<div class="arithmatex">\[
+5\equiv 1\pmod 4.
+\]</div>
+<h3 id="122-le-nombre-13">12.2. Le nombre <span class="arithmatex">\(13\)</span><a class="headerlink" href="#122-le-nombre-13" title="Permanent link">&para;</a></h3>
+<p>On a</p>
+<div class="arithmatex">\[
+13=2^2+3^2.
+\]</div>
+<p>Et</p>
+<div class="arithmatex">\[
+13\equiv 1\pmod 4.
+\]</div>
+<h3 id="123-le-nombre-17">12.3. Le nombre <span class="arithmatex">\(17\)</span><a class="headerlink" href="#123-le-nombre-17" title="Permanent link">&para;</a></h3>
+<p>On a</p>
+<div class="arithmatex">\[
+17=1^2+4^2.
+\]</div>
+<p>Et</p>
+<div class="arithmatex">\[
+17\equiv 1\pmod 4.
+\]</div>
+<h3 id="124-le-nombre-29">12.4. Le nombre <span class="arithmatex">\(29\)</span><a class="headerlink" href="#124-le-nombre-29" title="Permanent link">&para;</a></h3>
+<p>On a</p>
+<div class="arithmatex">\[
+29=2^2+5^2.
+\]</div>
+<p>Et</p>
+<div class="arithmatex">\[
+29\equiv 1\pmod 4.
+\]</div>
+<h3 id="125-le-nombre-65">12.5. Le nombre <span class="arithmatex">\(65\)</span><a class="headerlink" href="#125-le-nombre-65" title="Permanent link">&para;</a></h3>
+<p>On a</p>
+<div class="arithmatex">\[
+65=5\cdot 13.
+\]</div>
+<p>Or</p>
+<div class="arithmatex">\[
+5=1^2+2^2
+\]</div>
+<p>et</p>
+<div class="arithmatex">\[
+13=2^2+3^2.
+\]</div>
+<p>En utilisant l'identité des deux carrés :</p>
+<div class="arithmatex">\[
+(1^2+2^2)(2^2+3^2)
+=
+(1\cdot 2-2\cdot 3)^2+(1\cdot 3+2\cdot 2)^2.
+\]</div>
+<p>Donc</p>
+<div class="arithmatex">\[
+65=(-4)^2+7^2.
+\]</div>
+<p>Ainsi</p>
+<div class="arithmatex">\[
+65=4^2+7^2.
+\]</div>
+<p>On a aussi</p>
+<div class="arithmatex">\[
+65=1^2+8^2.
+\]</div>
+<h3 id="126-le-nombre-325">12.6. Le nombre <span class="arithmatex">\(325\)</span><a class="headerlink" href="#126-le-nombre-325" title="Permanent link">&para;</a></h3>
+<p>On a</p>
+<div class="arithmatex">\[
+325=5^2\cdot 13.
+\]</div>
+<p>Comme <span class="arithmatex">\(5\)</span> et <span class="arithmatex">\(13\)</span> sont congrus à <span class="arithmatex">\(1\)</span> modulo <span class="arithmatex">\(4\)</span>, l'entier <span class="arithmatex">\(325\)</span> est somme de deux carrés.</p>
+<p>Par exemple :</p>
+<div class="arithmatex">\[
+325=1^2+18^2.
+\]</div>
+<p>En effet :</p>
+<div class="arithmatex">\[
+1+324=325.
+\]</div>
+<p>On a aussi :</p>
+<div class="arithmatex">\[
+325=6^2+17^2.
+\]</div>
+<h3 id="127-un-entier-non-representable-21">12.7. Un entier non représentable : <span class="arithmatex">\(21\)</span><a class="headerlink" href="#127-un-entier-non-representable-21" title="Permanent link">&para;</a></h3>
+<p>On a</p>
+<div class="arithmatex">\[
+21=3\cdot 7.
+\]</div>
+<p>Les deux premiers <span class="arithmatex">\(3\)</span> et <span class="arithmatex">\(7\)</span> sont congrus à <span class="arithmatex">\(3\)</span> modulo <span class="arithmatex">\(4\)</span> :</p>
+<div class="arithmatex">\[
+3\equiv 3\pmod 4
+\]</div>
+<p>et</p>
+<div class="arithmatex">\[
+7\equiv 3\pmod 4.
+\]</div>
+<p>Ils apparaissent tous les deux avec exposant <span class="arithmatex">\(1\)</span>, donc impair.</p>
+<p>Ainsi <span class="arithmatex">\(21\)</span> n'est pas somme de deux carrés.</p>
+<h3 id="128-role-des-exposants-pairs">12.8. Rôle des exposants pairs<a class="headerlink" href="#128-role-des-exposants-pairs" title="Permanent link">&para;</a></h3>
+<p>Le nombre <span class="arithmatex">\(45\)</span> est représentable :</p>
+<div class="arithmatex">\[
+45=3^2\cdot 5.
+\]</div>
+<p>Le premier <span class="arithmatex">\(3\equiv 3\pmod 4\)</span> apparaît avec exposant <span class="arithmatex">\(2\)</span>, donc pair. Le premier <span class="arithmatex">\(5\equiv 1\pmod 4\)</span> ne pose pas d'obstruction.</p>
+<p>On a effectivement</p>
+<div class="arithmatex">\[
+45=3^2+6^2.
+\]</div>
+<p>En revanche,</p>
+<div class="arithmatex">\[
+15=3\cdot 5
+\]</div>
+<p>n'est pas représentable, car <span class="arithmatex">\(3\equiv 3\pmod 4\)</span> apparaît avec exposant impair.</p>
+<hr />
+<h2 id="13-dependances-conceptuelles">13. Dépendances conceptuelles<a class="headerlink" href="#13-dependances-conceptuelles" title="Permanent link">&para;</a></h2>
+<h3 id="congruences">Congruences<a class="headerlink" href="#congruences" title="Permanent link">&para;</a></h3>
+<p>Les congruences permettent de détecter des obstructions. La première obstruction est modulo <span class="arithmatex">\(4\)</span> : une somme de deux carrés n'est jamais congrue à <span class="arithmatex">\(3\)</span> modulo <span class="arithmatex">\(4\)</span>.</p>
+<h3 id="residus-quadratiques">Résidus quadratiques<a class="headerlink" href="#residus-quadratiques" title="Permanent link">&para;</a></h3>
+<p>La question de savoir si <span class="arithmatex">\(-1\)</span> est un carré modulo <span class="arithmatex">\(p\)</span> est centrale. Elle contrôle l'existence d'un entier <span class="arithmatex">\(u\)</span> tel que <span class="arithmatex">\(u^2+1\)</span> soit divisible par <span class="arithmatex">\(p\)</span>.</p>
+<h3 id="critere-deuler">Critère d'Euler<a class="headerlink" href="#critere-deuler" title="Permanent link">&para;</a></h3>
+<p>Le critère d'Euler donne une manière efficace de décider si <span class="arithmatex">\(-1\)</span> est un carré modulo <span class="arithmatex">\(p\)</span>. Il implique que <span class="arithmatex">\(-1\)</span> est un carré modulo <span class="arithmatex">\(p\)</span> exactement lorsque <span class="arithmatex">\(p\equiv 1\pmod 4\)</span>.</p>
+<h3 id="descente-infinie">Descente infinie<a class="headerlink" href="#descente-infinie" title="Permanent link">&para;</a></h3>
+<p>La descente permet de passer d'une représentation d'un multiple de <span class="arithmatex">\(p\)</span> à une représentation de <span class="arithmatex">\(p\)</span> lui-même. C'est la méthode historique associée à Fermat et Euler.</p>
+<h3 id="identite-des-deux-carres">Identité des deux carrés<a class="headerlink" href="#identite-des-deux-carres" title="Permanent link">&para;</a></h3>
+<p>L'identité</p>
+<div class="arithmatex">\[
+(a^2+b^2)(c^2+d^2)
+=
+(ac-bd)^2+(ad+bc)^2
+\]</div>
+<p>montre que la propriété d'être somme de deux carrés est multiplicative.</p>
+<h3 id="factorisation-unique-dans-mathbf-z">Factorisation unique dans <span class="arithmatex">\(\mathbf Z\)</span><a class="headerlink" href="#factorisation-unique-dans-mathbf-z" title="Permanent link">&para;</a></h3>
+<p>La factorisation première de <span class="arithmatex">\(n\)</span> permet de réduire la version générale du théorème au comportement des facteurs premiers.</p>
+<h3 id="anneau-mathbf-zi">Anneau <span class="arithmatex">\(\mathbf Z[i]\)</span><a class="headerlink" href="#anneau-mathbf-zi" title="Permanent link">&para;</a></h3>
+<p>L'anneau des entiers de Gauss rend visible la factorisation</p>
+<div class="arithmatex">\[
+x^2+y^2=(x+iy)(x-iy).
+\]</div>
+<p>Il transforme le problème en une question de normes.</p>
+<h3 id="norme">Norme<a class="headerlink" href="#norme" title="Permanent link">&para;</a></h3>
+<p>La norme <span class="arithmatex">\(N(a+bi)=a^2+b^2\)</span> est multiplicative. C'est elle qui explique structurellement l'identité des deux carrés.</p>
+<h3 id="anneau-euclidien">Anneau euclidien<a class="headerlink" href="#anneau-euclidien" title="Permanent link">&para;</a></h3>
+<p>Le fait que <span class="arithmatex">\(\mathbf Z[i]\)</span> soit euclidien garantit la factorisation unique. C'est pourquoi on peut raisonner dans <span class="arithmatex">\(\mathbf Z[i]\)</span> presque comme dans <span class="arithmatex">\(\mathbf Z\)</span>.</p>
+<h3 id="formes-quadratiques-binaires">Formes quadratiques binaires<a class="headerlink" href="#formes-quadratiques-binaires" title="Permanent link">&para;</a></h3>
+<p>La forme <span class="arithmatex">\(x^2+y^2\)</span> est la première forme quadratique binaire positive définie étudiée dans ce contexte. Elle ouvre la voie à la théorie générale de Gauss.</p>
+<h3 id="reciprocite-quadratique">Réciprocité quadratique<a class="headerlink" href="#reciprocite-quadratique" title="Permanent link">&para;</a></h3>
+<p>La condition <span class="arithmatex">\(p\equiv 1\pmod 4\)</span> équivaut à la résolubilité de <span class="arithmatex">\(x^2\equiv -1\pmod p\)</span>. C'est un cas fondamental de la logique des résidus quadratiques et de la réciprocité.</p>
+<hr />
+<h2 id="14-consequences-et-prolongements">14. Conséquences et prolongements<a class="headerlink" href="#14-consequences-et-prolongements" title="Permanent link">&para;</a></h2>
+<h3 id="141-vers-les-formes-quadratiques">14.1. Vers les formes quadratiques<a class="headerlink" href="#141-vers-les-formes-quadratiques" title="Permanent link">&para;</a></h3>
+<p>Le théorème des deux carrés pose une question modèle :</p>
+<blockquote>
+<p>Quels nombres sont représentés par <span class="arithmatex">\(x^2+y^2\)</span> ?</p>
+</blockquote>
+<p>La généralisation naturelle est :</p>
+<blockquote>
+<p>Quels nombres sont représentés par <span class="arithmatex">\(x^2+ny^2\)</span> ?</p>
+</blockquote>
+<p>Puis encore plus généralement :</p>
+<blockquote>
+<p>Quels nombres sont représentés par <span class="arithmatex">\(ax^2+bxy+cy^2\)</span> ?</p>
+</blockquote>
+<p>C'est précisément le domaine des formes quadratiques binaires.</p>
+<h3 id="142-vers-gauss">14.2. Vers Gauss<a class="headerlink" href="#142-vers-gauss" title="Permanent link">&para;</a></h3>
+<p>Gauss systématise les problèmes de représentation. Il ne se contente pas d'étudier une forme isolée : il classe les formes de discriminant donné, introduit leur composition et découvre une structure de groupe sur les classes.</p>
+<p>Le théorème des deux carrés correspond au discriminant <span class="arithmatex">\(-4\)</span>. C'est un cas simple, mais il contient déjà le germe de la théorie générale.</p>
+<h3 id="143-vers-dedekind">14.3. Vers Dedekind<a class="headerlink" href="#143-vers-dedekind" title="Permanent link">&para;</a></h3>
+<p>La preuve par <span class="arithmatex">\(\mathbf Z[i]\)</span> montre qu'un problème sur <span class="arithmatex">\(\mathbf Z\)</span> peut devenir plus transparent dans un anneau d'entiers algébriques.</p>
+<p>Ici,</p>
+<div class="arithmatex">\[
+\mathbf Z[i]
+\]</div>
+<p>est l'anneau d'entiers de</p>
+<div class="arithmatex">\[
+\mathbf Q(i).
+\]</div>
+<p>Dans ce cas, l'anneau est euclidien, donc la factorisation unique fonctionne. Mais dans d'autres anneaux d'entiers, la factorisation unique des éléments échoue.</p>
+<p>Dedekind remplacera alors les éléments par les idéaux. La factorisation unique renaît sous la forme :</p>
+<div class="arithmatex">\[
+I=\mathfrak p_1^{e_1}\cdots \mathfrak p_r^{e_r}.
+\]</div>
+<p>Le théorème des deux carrés est donc un ancêtre très concret de la théorie des idéaux.</p>
+<h3 id="144-vers-la-theorie-du-corps-de-classes">14.4. Vers la théorie du corps de classes<a class="headerlink" href="#144-vers-la-theorie-du-corps-de-classes" title="Permanent link">&para;</a></h3>
+<p>Les questions du type :</p>
+<blockquote>
+<p>quels premiers sont représentés par une forme donnée ?</p>
+</blockquote>
+<p>mènent progressivement à des lois de décomposition des premiers dans des extensions de corps de nombres.</p>
+<p>Pour <span class="arithmatex">\(x^2+y^2\)</span>, la condition est simple :</p>
+<div class="arithmatex">\[
+p\equiv 1\pmod 4.
+\]</div>
+<p>Elle correspond au comportement de <span class="arithmatex">\(p\)</span> dans l'extension quadratique</p>
+<div class="arithmatex">\[
+\mathbf Q(i)/\mathbf Q.
+\]</div>
+<p>Pour des formes plus compliquées, les conditions deviennent plus subtiles. La théorie du corps de classes donnera finalement un cadre général reliant :</p>
+<ul>
+<li>formes quadratiques ;</li>
+<li>idéaux ;</li>
+<li>groupes de classes ;</li>
+<li>extensions abéliennes ;</li>
+<li>lois de réciprocité ;</li>
+<li>décomposition des nombres premiers.</li>
+</ul>
+<hr />
+<h2 id="15-exercices">15. Exercices<a class="headerlink" href="#15-exercices" title="Permanent link">&para;</a></h2>
+<h3 id="niveau-1-congruences-elementaires">Niveau 1 — Congruences élémentaires<a class="headerlink" href="#niveau-1-congruences-elementaires" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Montrer qu'un carré est toujours congru à <span class="arithmatex">\(0\)</span> ou <span class="arithmatex">\(1\)</span> modulo <span class="arithmatex">\(4\)</span>.</li>
+<li>
+<p>Indication : distinguer les entiers pairs et impairs.</p>
+</li>
+<li>
+<p>Montrer qu'un entier congru à <span class="arithmatex">\(3\)</span> modulo <span class="arithmatex">\(4\)</span> ne peut pas être somme de deux carrés.</p>
+</li>
+<li>
+<p>Indication : utiliser l'exercice précédent.</p>
+</li>
+<li>
+<p>Vérifier que <span class="arithmatex">\(2\)</span>, <span class="arithmatex">\(5\)</span>, <span class="arithmatex">\(13\)</span>, <span class="arithmatex">\(17\)</span>, <span class="arithmatex">\(29\)</span>, <span class="arithmatex">\(37\)</span> sont des sommes de deux carrés.</p>
+</li>
+<li>
+<p>Indication : chercher directement de petits carrés.</p>
+</li>
+<li>
+<p>Montrer que <span class="arithmatex">\(3\)</span>, <span class="arithmatex">\(7\)</span>, <span class="arithmatex">\(11\)</span>, <span class="arithmatex">\(19\)</span>, <span class="arithmatex">\(23\)</span> ne sont pas des sommes de deux carrés.</p>
+</li>
+<li>Indication : regarder les congruences modulo <span class="arithmatex">\(4\)</span>.</li>
+</ol>
+<h3 id="niveau-2-identite-des-deux-carres">Niveau 2 — Identité des deux carrés<a class="headerlink" href="#niveau-2-identite-des-deux-carres" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Démontrer l'identité de Brahmagupta-Fibonacci.</li>
+<li>
+<p>Indication : développer les deux membres.</p>
+</li>
+<li>
+<p>Utiliser l'identité pour écrire <span class="arithmatex">\(65\)</span> comme somme de deux carrés à partir de <span class="arithmatex">\(5\)</span> et <span class="arithmatex">\(13\)</span>.</p>
+</li>
+<li>
+<p>Indication : utiliser <span class="arithmatex">\(5=1^2+2^2\)</span> et <span class="arithmatex">\(13=2^2+3^2\)</span>.</p>
+</li>
+<li>
+<p>Montrer que le produit de deux sommes de deux carrés est une somme de deux carrés.</p>
+</li>
+<li>
+<p>Indication : appliquer directement l'identité.</p>
+</li>
+<li>
+<p>Montrer que toute puissance d'une somme de deux carrés est une somme de deux carrés.</p>
+</li>
+<li>Indication : faire une récurrence.</li>
+</ol>
+<h3 id="niveau-3-premiers-3pmod-4">Niveau 3 — Premiers <span class="arithmatex">\(3\pmod 4\)</span><a class="headerlink" href="#niveau-3-premiers-3pmod-4" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Soit <span class="arithmatex">\(q\equiv 3\pmod 4\)</span> premier. Montrer que <span class="arithmatex">\(-1\)</span> n'est pas un carré modulo <span class="arithmatex">\(q\)</span>.</li>
+<li>
+<p>Indication : utiliser le critère d'Euler.</p>
+</li>
+<li>
+<p>Montrer que si <span class="arithmatex">\(q\equiv 3\pmod 4\)</span> divise <span class="arithmatex">\(x^2+y^2\)</span>, alors <span class="arithmatex">\(q\)</span> divise <span class="arithmatex">\(x\)</span> et <span class="arithmatex">\(y\)</span>.</p>
+<ul>
+<li>Indication : raisonner par contradiction en divisant par <span class="arithmatex">\(y^2\)</span> modulo <span class="arithmatex">\(q\)</span>.</li>
+</ul>
+</li>
+<li>
+<p>En déduire que si <span class="arithmatex">\(n=x^2+y^2\)</span>, alors tout premier <span class="arithmatex">\(q\equiv 3\pmod 4\)</span> apparaît avec exposant pair dans <span class="arithmatex">\(n\)</span>.</p>
+<ul>
+<li>Indication : extraire successivement <span class="arithmatex">\(q^2\)</span>.</li>
+</ul>
+</li>
+<li>
+<p>Décider si les entiers <span class="arithmatex">\(45\)</span>, <span class="arithmatex">\(75\)</span>, <span class="arithmatex">\(90\)</span>, <span class="arithmatex">\(125\)</span>, <span class="arithmatex">\(147\)</span>, <span class="arithmatex">\(325\)</span> sont sommes de deux carrés.</p>
+<ul>
+<li>Indication : factoriser et appliquer le critère général.</li>
+</ul>
+</li>
+</ol>
+<h3 id="niveau-4-descente">Niveau 4 — Descente<a class="headerlink" href="#niveau-4-descente" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Soit <span class="arithmatex">\(p\equiv 1\pmod 4\)</span> premier. Montrer qu'il existe <span class="arithmatex">\(u\)</span> tel que <span class="arithmatex">\(u^2+1\)</span> soit divisible par <span class="arithmatex">\(p\)</span>.</p>
+<ul>
+<li>Indication : utiliser le critère d'Euler.</li>
+</ul>
+</li>
+<li>
+<p>Montrer qu'il existe <span class="arithmatex">\(m&lt;p\)</span> tel que <span class="arithmatex">\(mp\)</span> soit somme de deux carrés.</p>
+<ul>
+<li>Indication : choisir <span class="arithmatex">\(u\)</span> entre <span class="arithmatex">\(-p/2\)</span> et <span class="arithmatex">\(p/2\)</span>.</li>
+</ul>
+</li>
+<li>
+<p>Reprendre la preuve par descente et vérifier précisément pourquoi <span class="arithmatex">\(n&lt;m\)</span>.</p>
+<ul>
+<li>Indication : utiliser <span class="arithmatex">\(|r|\leq m/2\)</span> et <span class="arithmatex">\(|s|\leq m/2\)</span>.</li>
+</ul>
+</li>
+<li>
+<p>Dans la preuve par descente, démontrer que <span class="arithmatex">\(xr+ys\)</span> et <span class="arithmatex">\(xs-yr\)</span> sont divisibles par <span class="arithmatex">\(m\)</span>.</p>
+<ul>
+<li>Indication : réduire modulo <span class="arithmatex">\(m\)</span>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="niveau-5-entiers-de-gauss">Niveau 5 — Entiers de Gauss<a class="headerlink" href="#niveau-5-entiers-de-gauss" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Montrer que <span class="arithmatex">\(N(\alpha\beta)=N(\alpha)N(\beta)\)</span> dans <span class="arithmatex">\(\mathbf Z[i]\)</span>.</p>
+<ul>
+<li>Indication : utiliser la conjugaison.</li>
+</ul>
+</li>
+<li>
+<p>Déterminer les unités de <span class="arithmatex">\(\mathbf Z[i]\)</span>.</p>
+<ul>
+<li>Indication : résoudre <span class="arithmatex">\(N(\alpha)=1\)</span>.</li>
+</ul>
+</li>
+<li>
+<p>Démontrer la division euclidienne dans <span class="arithmatex">\(\mathbf Z[i]\)</span>.</p>
+<ul>
+<li>Indication : approximer un complexe par un point du réseau <span class="arithmatex">\(\mathbf Z[i]\)</span>.</li>
+</ul>
+</li>
+<li>
+<p>Montrer que si <span class="arithmatex">\(p\equiv 1\pmod 4\)</span>, alors <span class="arithmatex">\(p\)</span> n'est pas irréductible dans <span class="arithmatex">\(\mathbf Z[i]\)</span>.</p>
+<ul>
+<li>Indication : utiliser <span class="arithmatex">\(p\mid (u+i)(u-i)\)</span>.</li>
+</ul>
+</li>
+<li>
+<p>Montrer que si <span class="arithmatex">\(q\equiv 3\pmod 4\)</span>, alors <span class="arithmatex">\(q\)</span> est irréductible dans <span class="arithmatex">\(\mathbf Z[i]\)</span>.</p>
+<ul>
+<li>Indication : si <span class="arithmatex">\(q=\alpha\beta\)</span>, regarder les normes.</li>
+</ul>
+</li>
+</ol>
+<h3 id="niveau-6-formes-quadratiques-et-histoire">Niveau 6 — Formes quadratiques et histoire<a class="headerlink" href="#niveau-6-formes-quadratiques-et-histoire" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Calculer le discriminant de la forme <span class="arithmatex">\(x^2+y^2\)</span>.</p>
+<ul>
+<li>Indication : utiliser <span class="arithmatex">\(D=b^2-4ac\)</span>.</li>
+</ul>
+</li>
+<li>
+<p>Expliquer pourquoi le théorème des deux carrés est un problème de représentation par une forme quadratique.</p>
+<ul>
+<li>Indication : formuler la question en termes de valeurs prises par <span class="arithmatex">\(x^2+y^2\)</span>.</li>
+</ul>
+</li>
+<li>
+<p>Comparer les questions suivantes : représenter <span class="arithmatex">\(p\)</span> par <span class="arithmatex">\(x^2+y^2\)</span>, par <span class="arithmatex">\(x^2+2y^2\)</span>, puis par <span class="arithmatex">\(ax^2+bxy+cy^2\)</span>.</p>
+<ul>
+<li>Indication : repérer ce qui reste semblable et ce qui change.</li>
+</ul>
+</li>
+<li>
+<p>Expliquer en une page pourquoi ce théorème relie Fermat, Euler, Gauss et Dedekind.</p>
+<ul>
+<li>Indication : suivre le fil représentation, descente, formes quadratiques, anneaux d'entiers.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="16-resultats-utilises-sans-demonstration-complete">16. Résultats utilisés sans démonstration complète<a class="headerlink" href="#16-resultats-utilises-sans-demonstration-complete" title="Permanent link">&para;</a></h2>
+<h3 id="161-critere-deuler">16.1. Critère d'Euler<a class="headerlink" href="#161-critere-deuler" title="Permanent link">&para;</a></h3>
+<p><strong>Énoncé.</strong> Soit <span class="arithmatex">\(p\)</span> un nombre premier impair et soit <span class="arithmatex">\(a\)</span> un entier non divisible par <span class="arithmatex">\(p\)</span>. Alors :</p>
+<div class="arithmatex">\[
+a^{(p-1)/2}\equiv 1\pmod p
+\]</div>
+<p>si <span class="arithmatex">\(a\)</span> est un carré modulo <span class="arithmatex">\(p\)</span>, et</p>
+<div class="arithmatex">\[
+a^{(p-1)/2}\equiv -1\pmod p
+\]</div>
+<p>sinon.</p>
+<p><strong>Utilisation.</strong> Il sert à décider quand <span class="arithmatex">\(-1\)</span> est un carré modulo <span class="arithmatex">\(p\)</span>.</p>
+<p><strong>Fiche future.</strong> <code>entries/euler-criterion.md</code>.</p>
+<h3 id="162-existence-dune-racine-carree-de-1-modulo-p">16.2. Existence d'une racine carrée de <span class="arithmatex">\(-1\)</span> modulo <span class="arithmatex">\(p\)</span><a class="headerlink" href="#162-existence-dune-racine-carree-de-1-modulo-p" title="Permanent link">&para;</a></h3>
+<p><strong>Énoncé.</strong> Si <span class="arithmatex">\(p\)</span> est un nombre premier impair, alors <span class="arithmatex">\(-1\)</span> est un carré modulo <span class="arithmatex">\(p\)</span> si et seulement si</p>
+<div class="arithmatex">\[
+p\equiv 1\pmod 4.
+\]</div>
+<p><strong>Utilisation.</strong> C'est le point de départ de la preuve d'existence pour <span class="arithmatex">\(p=x^2+y^2\)</span>.</p>
+<p><strong>Fiche future.</strong> <code>entries/minus-one-quadratic-residue.md</code>.</p>
+<h3 id="163-anneau-euclidien-implique-factoriel">16.3. Anneau euclidien implique factoriel<a class="headerlink" href="#163-anneau-euclidien-implique-factoriel" title="Permanent link">&para;</a></h3>
+<p><strong>Énoncé.</strong> Tout anneau euclidien est principal, et tout anneau principal est factoriel.</p>
+<p><strong>Utilisation.</strong> Ce résultat permet d'utiliser la factorisation unique dans <span class="arithmatex">\(\mathbf Z[i]\)</span>.</p>
+<p><strong>Fiche future.</strong> <code>entries/euclidean-domain-ufd.md</code>.</p>
+<h3 id="164-euclidianite-de-mathbf-zi">16.4. Euclidianité de <span class="arithmatex">\(\mathbf Z[i]\)</span><a class="headerlink" href="#164-euclidianite-de-mathbf-zi" title="Permanent link">&para;</a></h3>
+<p><strong>Énoncé.</strong> L'anneau <span class="arithmatex">\(\mathbf Z[i]\)</span> est euclidien pour la norme</p>
+<div class="arithmatex">\[
+N(a+bi)=a^2+b^2.
+\]</div>
+<p><strong>Utilisation.</strong> Cela garantit que <span class="arithmatex">\(\mathbf Z[i]\)</span> possède une bonne théorie de la divisibilité.</p>
+<p><strong>Statut dans cette fiche.</strong> Une preuve a été donnée, mais elle peut recevoir une fiche indépendante plus détaillée.</p>
+<p><strong>Fiche future.</strong> <code>entries/gaussian-integers-euclidean.md</code>.</p>
+<hr />
+<h2 id="17-references">17. Références<a class="headerlink" href="#17-references" title="Permanent link">&para;</a></h2>
+<h3 id="fermat">Fermat<a class="headerlink" href="#fermat" title="Permanent link">&para;</a></h3>
+<p>Fermat est la source historique du résultat et de la méthode de descente infinie. Ses énoncés sur les représentations par formes quadratiques motivent toute la ligne Fermat-Euler-Gauss.</p>
+<h3 id="euler">Euler<a class="headerlink" href="#euler" title="Permanent link">&para;</a></h3>
+<p>Euler donne les premières démonstrations systématiques de plusieurs résultats annoncés par Fermat. Il est essentiel pour comprendre comment l'identité des deux carrés et la descente deviennent des techniques effectives.</p>
+<h3 id="gauss-disquisitiones-arithmeticae">Gauss, Disquisitiones Arithmeticae<a class="headerlink" href="#gauss-disquisitiones-arithmeticae" title="Permanent link">&para;</a></h3>
+<p>Les Disquisitiones replacent le théorème dans la théorie générale des congruences, des résidus quadratiques et des formes quadratiques binaires.</p>
+<h3 id="david-a-cox-primes-of-the-form-x2ny2">David A. Cox, Primes of the Form <span class="arithmatex">\(x^2+ny^2\)</span><a class="headerlink" href="#david-a-cox-primes-of-the-form-x2ny2" title="Permanent link">&para;</a></h3>
+<p>Référence moderne très utile pour comprendre comment le problème <span class="arithmatex">\(x^2+y^2\)</span> se généralise à <span class="arithmatex">\(x^2+ny^2\)</span>, puis aux formes quadratiques et au corps de classes.</p>
+<h3 id="andre-weil-number-theory-an-approach-through-history-from-hammurapi-to-legendre">André Weil, Number Theory: An Approach Through History from Hammurapi to Legendre<a class="headerlink" href="#andre-weil-number-theory-an-approach-through-history-from-hammurapi-to-legendre" title="Permanent link">&para;</a></h3>
+<p>Référence historique et mathématique pour replacer Fermat, Euler, Lagrange et Legendre dans l'évolution longue de la théorie des nombres.</p>
+<h3 id="harold-m-edwards-fermats-last-theorem">Harold M. Edwards, Fermat's Last Theorem<a class="headerlink" href="#harold-m-edwards-fermats-last-theorem" title="Permanent link">&para;</a></h3>
+<p>Utile pour suivre la ligne qui va de Fermat à Kummer, et pour comprendre comment les questions de factorisation dans des anneaux plus grands apparaissent naturellement.</p>
+<h3 id="ireland-rosen-a-classical-introduction-to-modern-number-theory">Ireland-Rosen, A Classical Introduction to Modern Number Theory<a class="headerlink" href="#ireland-rosen-a-classical-introduction-to-modern-number-theory" title="Permanent link">&para;</a></h3>
+<p>Manuel moderne utile pour les congruences, la réciprocité quadratique, les sommes de Gauss et les méthodes classiques de théorie des nombres.</p>
+<hr />
+<h2 id="18-liens-internes-suggeres">18. Liens internes suggérés<a class="headerlink" href="#18-liens-internes-suggeres" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[[fermat-little-theorem]]</li>
+<li>[[quadratic-reciprocity]]</li>
+<li>[[gauss-composition]]</li>
+<li>[[dedekind-ideal-factorization]]</li>
+<li>[[quadratic-gauss-sums]]</li>
+<li>[[dirichlet-arithmetic-progressions]]</li>
+<li>[[quadratic-forms]]</li>
+<li>[[gaussian-integers]]</li>
+<li>[[euler-criterion]]</li>
+<li>[[minus-one-quadratic-residue]]</li>
+<li>[[fermat]]</li>
+<li>[[euler]]</li>
+<li>[[lagrange]]</li>
+<li>[[legendre]]</li>
+<li>[[gauss]]</li>
+<li>[[dedekind]]</li>
+</ul>
+<hr />
+<h2 id="19-version-ultra-courte">19. Version ultra-courte<a class="headerlink" href="#19-version-ultra-courte" title="Permanent link">&para;</a></h2>
+<p>Le théorème des deux carrés affirme qu'un entier positif <span class="arithmatex">\(n\)</span> est de la forme <span class="arithmatex">\(x^2+y^2\)</span> si et seulement si tout nombre premier <span class="arithmatex">\(q\equiv 3\pmod 4\)</span> apparaît avec exposant pair dans sa factorisation première.</p>
+<p>Pour les nombres premiers, cela signifie que <span class="arithmatex">\(2\)</span> et les premiers <span class="arithmatex">\(p\equiv 1\pmod 4\)</span> sont exactement les premiers sommes de deux carrés.</p>
+<p>La nécessité vient du fait qu'un carré modulo <span class="arithmatex">\(4\)</span> vaut <span class="arithmatex">\(0\)</span> ou <span class="arithmatex">\(1\)</span>.</p>
+<p>La suffisance repose sur deux idées : l'identité multiplicative des deux carrés et le fait que si <span class="arithmatex">\(p\equiv 1\pmod 4\)</span>, alors <span class="arithmatex">\(-1\)</span> est un carré modulo <span class="arithmatex">\(p\)</span>.</p>
+<p>Historiquement, Fermat énonce le résultat, Euler le démontre par descente, Gauss l'intègre dans la théorie des formes quadratiques, et la lecture moderne par <span class="arithmatex">\(\mathbf Z[i]\)</span> l'interprète comme une propriété de normes et de factorisation.</p>
+<p>La formule centrale est :</p>
+<div class="arithmatex">\[
+x^2+y^2=N(x+iy).
+\]</div>
+<p>Ainsi, le théorème annonce déjà la grande méthode de la théorie algébrique des nombres : agrandir l'anneau pour transformer une question diophantienne en question de factorisation.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
