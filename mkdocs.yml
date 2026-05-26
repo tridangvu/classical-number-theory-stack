@@ -1,0 +1,55 @@
+site_name: Classical Number Theory Stack
+site_description: Histoire technique de la théorie des nombres de Fermat à Hilbert
+site_author: Tri
+
+theme:
+  name: material
+  language: fr
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.superfences
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Accueil: index.md
+  - Carte du projet: project-map.md
+  - Entrées:
+      - Théorème des deux carrés: entries/two-squares-theorem.md
+      - Petit théorème de Fermat: entries/fermat-little-theorem.md
+      - Réciprocité quadratique: entries/quadratic-reciprocity.md
+      - Composition de Gauss: entries/gauss-composition.md
+      - Théorème de Dirichlet: entries/dirichlet-arithmetic-progressions.md
+      - Sommes de Gauss quadratiques: entries/quadratic-gauss-sums.md
+      - Critère de Kummer: entries/kummer-regular-primes.md
+      - Factorisation des idéaux: entries/dedekind-ideal-factorization.md
+      - Théorème des unités: entries/dirichlet-unit-theorem.md
+      - Zahlbericht: entries/hilbert-zahlbericht.md
+  - Notes:
+      - Périmètre: notes/scope-fermat-to-hilbert.md
+      - Taxonomie initiale: notes/taxonomy-initial.md
+  - Timelines:
+      - Fermat à Hilbert: timelines/fermat-to-hilbert-main-timeline.md
+  - Sources:
+      - Disquisitiones Arithmeticae: sources/gauss-disquisitiones-arithmeticae.md
+      - Zahlbericht: sources/hilbert-zahlbericht.md
+      - Cox: sources/cox-primes-of-the-form-x2-ny2.md
+      - Edwards: sources/edwards-fermat-last-theorem.md
