@@ -12,17 +12,17 @@ status: draft
 
 ## Énoncé moderne
 
-Si \(p\) est un nombre premier et si \(a\) est un entier non divisible par \(p\), alors
+Si $p$ est un nombre premier et si $a$ est un entier non divisible par $p$, alors
 
-\[
+$$
 a^{p-1} \equiv 1 \pmod p.
-\]
+$$
 
-Équivalemment, pour tout entier \(a\),
+Équivalemment, pour tout entier $a$,
 
-\[
+$$
 a^p \equiv a \pmod p.
-\]
+$$
 
 ## Contexte historique
 
@@ -34,7 +34,7 @@ Comprendre le comportement des puissances modulo un nombre premier.
 
 ## Idée de preuve
 
-Utiliser le fait que la multiplication par \(a\) permute les classes non nulles modulo \(p\).
+Utiliser le fait que la multiplication par $a$ permute les classes non nulles modulo $p$.
 
 ## Preuve ou esquisse
 
@@ -43,8 +43,8 @@ Utiliser le fait que la multiplication par \(a\) permute les classes non nulles 
 ## Dépendances conceptuelles
 
 - Congruences.
-- Corps fini \(\mathbf F_p\), en langage moderne.
-- Groupe multiplicatif \(\mathbf F_p^\times\), en langage moderne.
+- Corps fini $\mathbf F_p$, en langage moderne.
+- Groupe multiplicatif $\mathbf F_p^\times$, en langage moderne.
 
 ## Conséquences
 
@@ -55,9 +55,9 @@ Utiliser le fait que la multiplication par \(a\) permute les classes non nulles 
 
 ## Exercices
 
-1. Démontrer le théorème par permutation des classes modulo \(p\).
-2. Démontrer la version \(a^p \equiv a \pmod p\).
-3. Trouver un contre-exemple si \(p\) n'est pas premier.
+1. Démontrer le théorème par permutation des classes modulo $p$.
+2. Démontrer la version $a^p \equiv a \pmod p$.
+3. Trouver un contre-exemple si $p$ n'est pas premier.
 
 ## Références
 

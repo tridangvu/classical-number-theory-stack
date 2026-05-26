@@ -12,7 +12,7 @@ status: draft
 
 ## Énoncé moderne
 
-Les classes propres de formes quadratiques binaires primitives de discriminant fixé \(D\) forment un groupe abélien pour la loi de composition de Gauss.
+Les classes propres de formes quadratiques binaires primitives de discriminant fixé $D$ forment un groupe abélien pour la loi de composition de Gauss.
 
 ## Contexte historique
 
@@ -24,7 +24,7 @@ Comprendre non seulement quelles formes représentent quels entiers, mais commen
 
 ## Idée de preuve
 
-Une forme quadratique de discriminant \(D\) encode une structure arithmétique. La composition correspond, en langage moderne, à la multiplication de certains idéaux dans l'ordre quadratique de discriminant \(D\).
+Une forme quadratique de discriminant $D$ encode une structure arithmétique. La composition correspond, en langage moderne, à la multiplication de certains idéaux dans l'ordre quadratique de discriminant $D$.
 
 ## Preuve ou esquisse
 
@@ -34,7 +34,7 @@ Une forme quadratique de discriminant \(D\) encode une structure arithmétique. 
 
 - Formes quadratiques binaires.
 - Discriminant.
-- Équivalence propre sous \(\mathrm{SL}_2(\mathbf Z)\).
+- Équivalence propre sous $\mathrm{SL}_2(\mathbf Z)$.
 - Réduction des formes.
 - Idéaux quadratiques, en lecture moderne.
 
@@ -48,7 +48,7 @@ Une forme quadratique de discriminant \(D\) encode une structure arithmétique. 
 ## Exercices
 
 1. Composer explicitement deux formes simples de même discriminant.
-2. Vérifier que \([1,0,1]\) est l'élément neutre pour le discriminant \(-4\).
+2. Vérifier que $[1,0,1]$ est l'élément neutre pour le discriminant $-4$.
 3. Relier la composition à une identité de multiplication de normes.
 
 ## Références

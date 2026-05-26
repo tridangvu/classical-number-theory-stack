@@ -12,13 +12,13 @@ status: draft
 
 ## Énoncé moderne
 
-Soit \(K\) un corps de nombres et soit \(\mathcal O_K\) son anneau d'entiers. Tout idéal non nul \(I\) de \(\mathcal O_K\) se factorise de manière unique sous la forme
+Soit $K$ un corps de nombres et soit $\mathcal O_K$ son anneau d'entiers. Tout idéal non nul $I$ de $\mathcal O_K$ se factorise de manière unique sous la forme
 
-\[
+$$
 I = \mathfrak p_1^{e_1}\cdots \mathfrak p_r^{e_r},
-\]
+$$
 
-où les \(\mathfrak p_i\) sont des idéaux premiers non nuls distincts et les \(e_i\) sont des entiers strictement positifs.
+où les $\mathfrak p_i$ sont des idéaux premiers non nuls distincts et les $e_i$ sont des entiers strictement positifs.
 
 ## Contexte historique
 
@@ -40,7 +40,7 @@ Même si les éléments ne se factorisent pas toujours uniquement, les idéaux s
 
 - Nombres algébriques.
 - Entiers algébriques.
-- Anneau d'entiers \(\mathcal O_K\).
+- Anneau d'entiers $\mathcal O_K$.
 - Idéaux.
 - Idéaux premiers.
 - Domaines de Dedekind.
@@ -55,7 +55,7 @@ Même si les éléments ne se factorisent pas toujours uniquement, les idéaux s
 ## Exercices
 
 1. Donner un exemple d'anneau où la factorisation des éléments échoue.
-2. Calculer la factorisation de petits idéaux dans \(\mathbf Z[i]\).
+2. Calculer la factorisation de petits idéaux dans $\mathbf Z[i]$.
 3. Expliquer pourquoi la factorisation des idéaux corrige l'échec de la factorisation des éléments.
 
 ## Références

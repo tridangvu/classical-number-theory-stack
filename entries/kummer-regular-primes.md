@@ -12,11 +12,11 @@ status: draft
 
 ## Énoncé moderne
 
-Un nombre premier impair \(p\) est dit régulier s'il ne divise pas le nombre de classes du corps cyclotomique \(\mathbf Q(\zeta_p)\).
+Un nombre premier impair $p$ est dit régulier s'il ne divise pas le nombre de classes du corps cyclotomique $\mathbf Q(\zeta_p)$.
 
-Kummer montre que, pour un tel nombre premier \(p\), le dernier théorème de Fermat est vrai pour l'exposant \(p\).
+Kummer montre que, pour un tel nombre premier $p$, le dernier théorème de Fermat est vrai pour l'exposant $p$.
 
-Il établit aussi un critère reliant cette régularité à la divisibilité de certains nombres de Bernoulli par \(p\).
+Il établit aussi un critère reliant cette régularité à la divisibilité de certains nombres de Bernoulli par $p$.
 
 ## Contexte historique
 
@@ -26,15 +26,15 @@ Kummer introduit les nombres idéaux pour corriger l'échec de la factorisation 
 
 La factorisation
 
-\[
+$$
 x^p+y^p = \prod_{k=0}^{p-1}(x+\zeta_p^k y)
-\]
+$$
 
 semble prometteuse pour attaquer Fermat, mais elle échoue si l'anneau cyclotomique n'a pas factorisation unique.
 
 ## Idée de preuve
 
-Contrôler l'obstruction à la factorisation unique dans \(\mathbf Q(\zeta_p)\). Les nombres premiers réguliers sont ceux pour lesquels cette obstruction ne contient pas de \(p\)-torsion.
+Contrôler l'obstruction à la factorisation unique dans $\mathbf Q(\zeta_p)$. Les nombres premiers réguliers sont ceux pour lesquels cette obstruction ne contient pas de $p$-torsion.
 
 ## Preuve ou esquisse
 
@@ -58,7 +58,7 @@ Contrôler l'obstruction à la factorisation unique dans \(\mathbf Q(\zeta_p)\).
 
 ## Exercices
 
-1. Écrire la factorisation cyclotomique de \(x^p+y^p\).
+1. Écrire la factorisation cyclotomique de $x^p+y^p$.
 2. Expliquer pourquoi la factorisation unique serait utile pour Fermat.
 3. Identifier précisément où l'échec de la factorisation unique bloque l'argument naïf.
 
